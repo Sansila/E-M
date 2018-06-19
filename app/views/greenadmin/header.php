@@ -113,7 +113,7 @@
 		<script type="text/javascript" src="<?php echo base_url('assets/js/respond.min.js') ;?>"></script>
 		<![endif]-->
 		
-		<script src="<?php echo base_url('assets/js/jquery-3.3.1.min.js')?>"></script>
+		<script src="<?php echo base_url('assets/js/jquery.min.js')?>"></script>
 		<script src="<?php echo base_url('assets/js/jquery-ui.custom.js')?>"></script>					
 		<script src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>		
 		<script src="<?php echo base_url('assets/js/fullcalendar.min.js')?>"></script>
@@ -137,6 +137,7 @@
 		<script src="<?php echo base_url('assets/js/jui.js')?>"></script>
 		<script src="<?php echo base_url('assets/js/tables.js')?>"></script>
 		<script src="<?php echo base_url('assets/js/jquery.dataTables.min.js')?>"></script>				
+		<!-- <script src="<?php //echo base_url('assets/js/datatables-1.10.18.min.js')?>"></script> -->
 		<script src="<?php echo base_url('assets/js/form_common.js')?>"></script>	
 
 		<!-- Notification -->
