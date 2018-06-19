@@ -37,7 +37,7 @@ class Site extends CI_Controller {
 		
 		// $this->load->view('site/home'); 
 		// $this->load->view('site/footer');
-		//$this->load->view('site/header',$datas);
+		$this->load->view('site/green/header',$datas);
 		//$this->load->view('site/slider');
 		if(isset($_GET['p'])){
 			// $this->parser->parse('site/view_page', $data);
@@ -102,7 +102,7 @@ class Site extends CI_Controller {
       		$datas['rowgetproductdescription'] = $this->sites->getproductdescription();
 		}
 		$this->load->view('site/green/index',$datas);
-		//$this->load->view('site/footer');
+		$this->load->view('site/green/footer');
 	}
 	function getcategory($id=''){
 		$lid=$id;

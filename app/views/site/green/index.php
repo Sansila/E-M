@@ -1,42 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-        <title>GreenFair</title>
-
-        <!--    Google Fonts-->
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-
-        <!--Fontawesom-->
-        <link rel="stylesheet" href="<?=base_url().'assets/green/css/font-awesome.min.css'?>">
-
-        <!--Animated CSS-->
-        <link rel="stylesheet" type="text/css" href="<?=base_url().'assets/green/css/animate.min.css'?>">
-
-        <!-- Bootstrap -->
-        <link href="<?=base_url().'assets/green/css/bootstrap.min.css'?>" rel="stylesheet">
-        <!--Bootstrap Carousel-->
-        <link type="text/css" rel="stylesheet" href="<?=base_url().'assets/green/css/carousel.css'?>" />
-
-        <link rel="stylesheet" href="<?=base_url().'assets/green/css/isotope/style.css'?>">
-
-        <!--Main Stylesheet-->
-        <link href="<?=base_url().'assets/green/css/style.css'?>" rel="stylesheet">
-        <!--Responsive Framework-->
-        <link href="<?=base_url().'assets/green/css/responsive.css'?>" rel="stylesheet">
-
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-    </head>
 
     <body data-spy="scroll" data-target="#header">
 
@@ -86,7 +47,7 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand custom_navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+                                <a class="navbar-brand custom_navbar-brand" href="#"><img src="<?=base_url().'assets/green/img/logo.png'?>" alt=""></a>
                             </div>
                             <!--End of navbar-header-->
 
@@ -131,7 +92,7 @@
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
                         <div class="slider_overlay">
-                            <img src="img/img1.jpg" alt="...">
+                            <img src="<?=base_url().'assets/green/'?>img/img1.jpg" alt="...">
                             <div class="carousel-caption">
                                 <div class="slider_text">
                                     <h3>Protect</h3>
@@ -145,7 +106,7 @@
                     <!--End of item With Active-->
                     <div class="item">
                         <div class="slider_overlay">
-                            <img src="img/img2.jpg" alt="...">
+                            <img src="<?=base_url().'assets/green/'?>img/img2.jpg" alt="...">
                             <div class="carousel-caption">
                                 <div class="slider_text">
                                     <h3>Protect</h3>
@@ -159,7 +120,7 @@
                     <!--End of Item-->
                     <div class="item">
                         <div class="slider_overlay">
-                            <img src="img/img3.jpg" alt="...">
+                            <img src="<?=base_url().'assets/green/'?>img/img3.jpg" alt="...">
                             <div class="carousel-caption">
                                 <div class="slider_text">
                                     <h3>Protect</h3>
@@ -333,31 +294,31 @@
                                     <div class="img_overlay">
                                         <p>Sun Homes, Dhaka</p>
                                     </div>
-                                    <img src="img/environment.jpg" alt="">
+                                    <img src="<?=base_url().'assets/green/'?>img/environment.jpg" alt="">
                                 </div>
                                 <div class="note red">
                                     <div class="img_overlay">
                                         <p>Sun Homes, Dhaka</p>
                                     </div>
-                                    <img src="img/portfolio_1.jpg" alt="">
+                                    <img src="<?=base_url().'assets/green/'?>img/portfolio_1.jpg" alt="">
                                 </div>
                                 <div class="note green">
                                     <div class="img_overlay">
                                         <p>Sun Homes, Dhaka</p>
                                     </div>
-                                    <img src="img/cliemate.jpg" alt="">
+                                    <img src="<?=base_url().'assets/green/'?>img/cliemate.jpg" alt="">
                                 </div>
                                 <div class="note yellow">
                                     <div class="img_overlay">
                                         <p>Sun Homes, Dhaka</p>
                                     </div>
-                                    <img src="img/photography.jpg" alt="">
+                                    <img src="<?=base_url().'assets/green/'?>img/photography.jpg" alt="">
                                 </div>
                                 <div class="note black">
                                     <div class="img_overlay">
                                         <p>Sun Homes, Dhaka</p>
                                     </div>
-                                    <img src="img/species.jpg" alt="">
+                                    <img src="<?=base_url().'assets/green/'?>img/species.jpg" alt="">
                                 </div>
                             </div>
                             <!--End of notes-->
@@ -392,7 +353,7 @@
                         <div class="col-md-3">
                             <div class="counter_item text-center">
                                 <div class="sigle_counter_item">
-                                    <img src="img/tree.png" alt="">
+                                    <img src="<?=base_url().'assets/green/'?>img/tree.png" alt="">
                                     <div class="counter_text">
                                         <span class="counter">1542</span>
                                         <p>tree cut</p>
@@ -403,7 +364,7 @@
                         <div class="col-md-3">
                             <div class="counter_item text-center">
                                 <div class="sigle_counter_item">
-                                    <img src="img/hand.png" alt="">
+                                    <img src="<?=base_url().'assets/green/'?>img/hand.png" alt="">
                                     <div class="counter_text">
                                         <span class="counter">1458</span>
                                         <p>animal lost</p>
@@ -414,7 +375,7 @@
                         <div class="col-md-3">
                             <div class="counter_item text-center">
                                 <div class="sigle_counter_item">
-                                    <img src="img/tuhnder.png" alt="">
+                                    <img src="<?=base_url().'assets/green/'?>img/tuhnder.png" alt="">
                                     <div class="counter_text">
                                         <span class="counter">9854</span>
                                         <p>blubs collected</p>
@@ -425,7 +386,7 @@
                         <div class="col-md-3">
                             <div class="counter_item text-center">
                                 <div class="sigle_counter_item">
-                                    <img src="img/cloud.png" alt="">
+                                    <img src="<?=base_url().'assets/green/'?>img/cloud.png" alt="">
                                     <div class="counter_text">
                                         <span class="counter">5412</span>
                                         <p>water level</p>
@@ -461,7 +422,7 @@
                             <div class="col-md-6 zero_mp">
                                 <div class="event_item">
                                     <div class="event_img">
-                                        <img src="img/tree_cut_1.jpg" alt="">
+                                        <img src="<?=base_url().'assets/green/'?>img/tree_cut_1.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -491,7 +452,7 @@
                             <div class="col-md-6 zero_mp">
                                 <div class="event_item">
                                     <div class="event_img">
-                                        <img src="img/tree_cut_2.jpg" alt="">
+                                        <img src="<?=base_url().'assets/green/'?>img/tree_cut_2.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -503,7 +464,7 @@
                         <div class="event_news">
                             <div class="event_single_item fix">
                                 <div class="event_news_img floatleft">
-                                    <img src="img/tree_cut_3.jpg" alt="">
+                                    <img src="<?=base_url().'assets/green/'?>img/tree_cut_3.jpg" alt="">
                                 </div>
                                 <div class="event_news_text">
                                     <a href="#"><h4>Let’s plant 200 tree each...</h4></a>
@@ -514,7 +475,7 @@
                         <div class="event_news">
                             <div class="event_single_item fix">
                                 <div class="event_news_img floatleft">
-                                    <img src="img/tree_cut_4.jpg" alt="">
+                                    <img src="<?=base_url().'assets/green/'?>img/tree_cut_4.jpg" alt="">
                                 </div>
                                 <div class="event_news_text">
                                     <a href="#"><h4>Keep your house envirome..</h4></a>
@@ -525,7 +486,7 @@
                         <div class="event_news">
                             <div class="event_single_item fix">
                                 <div class="event_news_img floatleft">
-                                    <img src="img/tree_cut_3.jpg" alt="">
+                                    <img src="<?=base_url().'assets/green/'?>img/tree_cut_3.jpg" alt="">
                                 </div>
                                 <div class="event_news_text">
                                     <a href="#"><h4>Urgent Clothe Needed Needed</h4></a>
@@ -536,7 +497,7 @@
                         <div class="event_news">
                             <div class="event_single_item fix">
                                 <div class="event_news_img floatleft">
-                                    <img src="img/tree_cut_4.jpg" alt="">
+                                    <img src="<?=base_url().'assets/green/'?>img/tree_cut_4.jpg" alt="">
                                 </div>
                                 <div class="event_news_text">
                                     <a href="#"><h4>One Tree Thousand Hope</h4></a>
@@ -547,7 +508,7 @@
                         <div class="event_news">
                             <div class="event_single_item fix">
                                 <div class="event_news_img floatleft">
-                                    <img src="img/tree_cut_3.jpg" alt="">
+                                    <img src="<?=base_url().'assets/green/'?>img/tree_cut_3.jpg" alt="">
                                 </div>
                                 <div class="event_news_text">
                                     <a href="#"><h4>One Tree Thousand Hope</h4></a>
@@ -595,7 +556,7 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="profile-circle">
-                                                            <img src="img/tree_cut_3.jpg" alt="">
+                                                            <img src="<?=base_url().'assets/green/'?>img/tree_cut_3.jpg" alt="">
                                                         </div>
                                                         <div class="testimonial_content">
                                                             <i class="fa fa-quote-left"></i>
@@ -608,7 +569,7 @@
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="profile-circle">
-                                                            <img src="img/tree_cut_3.jpg" alt="">
+                                                            <img src="<?=base_url().'assets/green/'?>img/tree_cut_3.jpg" alt="">
                                                         </div>
                                                         <div class="testimonial_content">
                                                             <i class="fa fa-quote-left"></i>
@@ -626,7 +587,7 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="profile-circle">
-                                                            <img src="img/tree_cut_3.jpg" alt="">
+                                                            <img src="<?=base_url().'assets/green/'?>img/tree_cut_3.jpg" alt="">
                                                         </div>
                                                         <div class="testimonial_content">
                                                             <i class="fa fa-quote-left"></i>
@@ -639,7 +600,7 @@
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="profile-circle">
-                                                            <img src="img/tree_cut_3.jpg" alt="">
+                                                            <img src="<?=base_url().'assets/green/'?>img/tree_cut_3.jpg" alt="">
                                                         </div>
                                                         <div class="testimonial_content">
                                                             <i class="fa fa-quote-left"></i>
@@ -687,7 +648,7 @@
                         <div class="blog_news">
                             <div class="single_blog_item">
                                 <div class="blog_img">
-                                    <img src="img/climate_effect.jpg" alt="">
+                                    <img src="<?=base_url().'assets/green/'?>img/climate_effect.jpg" alt="">
                                 </div>
                                 <div class="blog_content">
                                     <a href=""><h3>Climate change is affecting bird migration</h3></a>
@@ -716,7 +677,7 @@
                         <div class="blog_news">
                             <div class="single_blog_item">
                                 <div class="blog_img">
-                                    <img src="img/air_pollutuon.jpg" alt="">
+                                    <img src="<?=base_url().'assets/green/'?>img/air_pollutuon.jpg" alt="">
                                 </div>
                                 <div class="blog_content">
                                     <a href=""><h3>How to avoid indoor air pollution?</h3></a>
@@ -745,7 +706,7 @@
                         <div class="blog_news">
                             <div class="single_blog_item">
                                 <div class="blog_img">
-                                    <img src="img/threat_bear.jpg" alt="">
+                                    <img src="<?=base_url().'assets/green/'?>img/threat_bear.jpg" alt="">
                                 </div>
                                 <div class="blog_content">
                                     <a href=""><h3>Threat to Yellowstone’s grizzly bears.</h3></a>
@@ -807,22 +768,22 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="market_logo">
-                                        <a href=""><img src="img/audiojungle.png" alt=""></a>
+                                        <a href=""><img src="<?=base_url().'assets/green/'?>img/audiojungle.png" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="market_logo">
-                                        <a href=""><img src="img/codecanyon.png" alt=""></a>
+                                        <a href=""><img src="<?=base_url().'assets/green/'?>img/codecanyon.png" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="market_logo">
-                                        <a href=""><img src="img/graphicriver.png" alt=""></a>
+                                        <a href=""><img src="<?=base_url().'assets/green/'?>img/graphicriver.png" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="market_logo">
-                                        <a href=""><img src="img/audiojungle.png" alt=""></a>
+                                        <a href=""><img src="<?=base_url().'assets/green/'?>img/audiojungle.png" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -942,95 +903,3 @@
         <!--End of Scroll to top-->
 
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>-->
-        <script src="<?=base_url().'assets/green/js/jquery-1.12.3.min.js'?>"></script>
-
-        <!--Counter UP Waypoint-->
-        <script src="<?=base_url().'assets/green/js/waypoints.min.js'?>"></script>
-        <!--Counter UP-->
-        <script src="<?=base_url().'assets/green/js/jquery.counterup.min.js'?>"></script>
-
-        <script>
-            //for counter up
-            $('.counter').counterUp({
-                delay: 10,
-                time: 1000
-            });
-        </script>
-
-        <!--Gmaps-->
-        <script src="<?=base_url().'assets/green/js/gmaps.min.js'?>"></script>
-        <script type="text/javascript">
-            var map;
-            $(document).ready(function () {
-                map = new GMaps({
-                    el: '#map',
-                    lat: 23.6911078,
-                    lng: 90.5112799,
-                    zoomControl: true,
-                    zoomControlOpt: {
-                        style: 'SMALL',
-                        position: 'LEFT_BOTTOM'
-                    },
-                    panControl: false,
-                    streetViewControl: false,
-                    mapTypeControl: false,
-                    overviewMapControl: false,
-                    scrollwheel: false,
-                });
-
-
-                map.addMarker({
-                    lat: 23.6911078,
-                    lng: 90.5112799,
-                    title: 'Office',
-                    details: {
-                        database_id: 42,
-                        author: 'Foysal'
-                    },
-                    click: function (e) {
-                        if (console.log)
-                            console.log(e);
-                        alert('You clicked in this marker');
-                    },
-                    mouseover: function (e) {
-                        if (console.log)
-                            console.log(e);
-                    }
-                });
-            });
-        </script>
-        <!--Google Maps API-->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjxvF9oTfcziZWw--3phPVx1ztAsyhXL4"></script>
-
-
-        <!--Isotope-->
-        <script src="<?=base_url().'assets/green/js/isotope/cells-by-row.js'?>"></script>
-        <script src="<?=base_url().'assets/green/js/isotope/isotope.pkgd.min.js'?>"></script>
-        <script src="<?=base_url().'assets/green/js/isotope/packery-mode.pkgd.min.js'?>"></script>
-        <script src="<?=base_url().'assets/green/js/isotope/scripts.js'?>"></script>
-
-
-        <!--Back To Top-->
-        <script src="<?=base_url().'assets/green/js/backtotop.js'?>"></script>
-
-
-        <!--JQuery Click to Scroll down with Menu-->
-        <script src="<?=base_url().'assets/green/js/jquery.localScroll.min.js'?>"></script>
-        <script src="<?=base_url().'assets/green/js/jquery.scrollTo.min.js'?>"></script>
-        <!--WOW With Animation-->
-        <script src="<?=base_url().'assets/green/js/wow.min.js'?>"></script>
-        <!--WOW Activated-->
-        <script>
-            new WOW().init();
-        </script>
-
-
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="<?=base_url().'assets/green/js/bootstrap.min.js'?>"></script>
-        <!-- Custom JavaScript-->
-        <script src="<?=base_url().'assets/green/js/main.js'?>"></script>
-    </body>
-
-</html>
