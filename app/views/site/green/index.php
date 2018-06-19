@@ -1,4 +1,4 @@
-
+    
     <body data-spy="scroll" data-target="#header">
 
         <!--Start Hedaer Section-->
@@ -54,14 +54,94 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse zero_mp" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav navbar-right main_menu">
-                                    <li class="active"><a href="#header">Home <span class="sr-only">(current)</span></a></li>
-                                    <li><a href="#welcome">about</a></li>
+                                    <!-- <li class="active"><a href="#header">Home <span class="sr-only">(current)</span></a></li> -->
+                                    <!-- <li><a href="#welcome">about</a></li>
                                     <li><a href="#portfolio">project</a></li>
                                     <li><a href="#counter">achivment</a></li>
                                     <li><a href="#event">event</a></li>
                                     <li><a href="#testimonial">testimonial</a></li>
                                     <li><a href="#blog">blog</a></li>
-                                    <li><a href="#contact">contact us</a></li>
+                                    <li><a href="#contact">contact us</a></li> -->
+                                    <?php
+                                    $menu = $this->db->query("SELECT * FROM tblmenus WHERE parentid=0 AND layout_id <> 1 AND  is_active=1 ORDER BY tblmenus.order ASC")->result();
+                                    $sl = "";
+                                    $i = 0;
+                                    foreach ($menu as $men) {
+                                        $active = '';
+                                        $men_name = $men->menu_name;
+                                        $parentid = $men->menu_id;
+                                        $menu_type=$men->menu_type;
+                                        if ($menu_type > 1){
+                                            $menu_type=$men->menu_type;
+                                        }else{
+                                            $menu_type='';
+                                        }
+                                        $link = '#';
+                                            if($menu_type == 10) {
+                                                $link = site_url('site/allcustomer/'.$men->menu_id);
+                                            }else if($menu_type == 9) {
+                                                $link = site_url('site/allservice/'.$men->menu_id);
+                                            }else if($menu_type == 3) {
+                                                $link = site_url('site/requestquote/'.$men->menu_id);
+                                            }else if($menu_type == 4) {
+                                                $link = site_url('site/contactus/'.$men->menu_id);
+                                            }else if($menu_type == 6) {
+                                                $link = site_url('site/allproduct/'.$men->menu_id);
+                                            }else if($menu_type == 7) {
+                                                $link = site_url('site/aboutus/'.$men->menu_id);
+                                            }else if($menu_type == 11) {
+                                                $link = site_url('site/templates/'.$men->menu_id);
+                                            }
+                                        
+                                        // $b=$this->uri->segment(3);
+                                        // $a= preg_replace("/[^1-9]/", '', $b);
+                                        // $c=trim($a,"2");
+                                        $active = $this->uri->segment(3) == $men->menu_id ? 'active' : '';
+                                        // alert("ljtrmht");
+                                        // $link = '#';
+                                        $Countparent = $this->db->query("SELECT count(menu_id) as count from tblmenus where parentid ='$parentid' ")->row()->count;
+                                        if ($Countparent > 1) {
+                                            $link = '#';
+                                        }
+                                        ?>
+
+                                <li class="<?=$active?> dropdown-icon">
+                                    <a href="<?=$link?>"><i class="" ></i><?=$men_name?></a>
+                                    <?php 
+                                         $sql_sub = "SELECT * FROM tblmenus WHERE is_active=1 AND level=1 AND parentid ='$parentid' ORDER BY tblmenus.order ASC "; 
+                                            $sub_menus = $this->db->query($sql_sub)->result();
+                                            if(count($sub_menus)>0){ 
+                                    ?>
+                                    <ul>
+                                         <?php
+                                           
+                                                foreach($sub_menus as $l_1){
+                                                    $submenuname=$l_1->menu_name;
+                                                    $link = '#';
+                                                    if($l_1->article_id != 0){
+                                                        $link = site_url('site/templates').'/'.$parentid;
+                                                    }else{
+                                                      $link = site_url('site/templates').'/'.$parentid;
+                                                    }
+                                                    $s = "
+                                                        <li class='active'>
+                                                            <a href='".$link."'>
+                                                            ".$submenuname."
+                                                            </a>
+                                                          </li>
+                                                    ";
+                                                    echo $s;
+                                                    
+                                                }
+                                            
+                                                
+                                        ?>
+                                       
+                                    </ul>
+                                    <?php }?>
+                                </li>
+
+                                <?php }?>
                                 </ul>
                             </div>
                             <!-- /.navbar-collapse -->

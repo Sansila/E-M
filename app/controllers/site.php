@@ -37,8 +37,10 @@ class Site extends CI_Controller {
 		
 		// $this->load->view('site/home'); 
 		// $this->load->view('site/footer');
+
 		$this->load->view('site/green/header',$datas);
-		//$this->load->view('site/slider');
+		//$this->load->view('site/header',$datas); //used before
+		//$this->load->view('site/slider'); //used before
 		if(isset($_GET['p'])){
 			// $this->parser->parse('site/view_page', $data);
 			$row=$this->db->query("SELECT * FROM tblmenus where menu_id='".$_GET['p']."'")->row();
@@ -102,7 +104,9 @@ class Site extends CI_Controller {
       		$datas['rowgetproductdescription'] = $this->sites->getproductdescription();
 		}
 		$this->load->view('site/green/index',$datas);
-		$this->load->view('site/green/footer');
+		//$this->load->view('site/home',$datas); //used before
+		$this->load->view('site/green/footer'); 
+		//$this->load->view('site/footer'); //used before
 	}
 	function getcategory($id=''){
 		$lid=$id;
