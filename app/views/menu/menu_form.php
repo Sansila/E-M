@@ -103,7 +103,7 @@ a{
                   <div class="col-lg-5"> 
                     <div class="col-md-12">
                       <select class="form-control" id="parent">
-                        <option value="">Please Select</option>
+                        <option value="0">Please Select</option>
                         <?php
                         $menu=$this->db->query("SELECT * FROM tblmenus where is_active='1' ORDER BY lineage asc")->result();
                         foreach ($menu as $menu) {
@@ -124,7 +124,7 @@ a{
                       <div class="col-lg-5"> 
                         <div class="col-md-12">
                           <select class="form-control" id="menu_type">
-                            <option>Please select</option>
+                            <option value="0">Please select</option>
                             <option value="article" <?php if(isset($row->menu_type)) if($row->menu_type=='article')  echo 'selected' ?>>Article</option>
                             <?php
                             $locat=$this->db->query("SELECT * FROM tbllocation WHERE is_active='1' AND location_type='category'")->result();
@@ -147,7 +147,7 @@ a{
                         <div class="col-lg-5"> 
                           <div class="col-md-12">
                             <select class="form-control" id="article_id" min=1 <?PHP if(isset($row->menu_type)) if($row->menu_type=='article')  echo 'required' ?>>
-                              <option value="">Please Select</option>
+                              <option value='0'>Please Select</option>
                               <?php
                               $data=$this->db->query("SELECT * FROM tblarticle WHERE is_active=1")->result();
                               foreach ($data as $a) {

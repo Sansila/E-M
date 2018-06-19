@@ -104,13 +104,13 @@
 		<link href="<?php echo base_url('assets/css/style.css') ?>" rel="stylesheet">
 		<!-- <link href="<?php echo base_url('assets/css/bootstrap-timepicker.css') ?>" rel="stylesheet"> -->
 		<link rel="stylesheet" href="<?php echo base_url('assets/css/fileinput.css') ?>" />
-		<!-- <link rel="stylesheet" href="<?php echo base_url();?>assets/css/star-rating.css" media="all" rel="stylesheet" type="text/css"/> -->
+		<!-- <link rel="stylesheet" href="<?php //echo base_url();?>assets/css/star-rating.css" media="all" rel="stylesheet" type="text/css"/> -->
 
 
 		
 		<!--[if lt IE 9]>
 
-		<script type="text/javascript" src="<?php echo base_url('assets/js/respond.min.js') ;?>"></script>
+		<script type="text/javascript" src="<?php //echo base_url('assets/js/respond.min.js') ;?>"></script>
 		<![endif]-->
 		
 		<script src="<?php echo base_url('assets/js/jquery.min.js')?>"></script>
@@ -123,7 +123,7 @@
 		<!-- Ck editor-->
 		<script src="<?php echo base_url('assets/js/editor/summernote.js')?>"></script>				
 
-		<!--<script src="<?php echo base_url('assets/js/jquery.icheck.min.js')?>"></script>-->
+		<!--<script src="<?php //echo base_url('assets/js/jquery.icheck.min.js')?>"></script>-->
 		<script src="<?php echo base_url('assets/js/select2.js')?>"></script>
 		<script src="<?php echo base_url('assets/js/jquery.validate.js')?>"></script>
 		<script src="<?php echo base_url('assets/js/form_validation.js')?>"></script>
@@ -149,27 +149,27 @@
 		<!-- jqprint -->
    	 	<script src="<?php echo base_url('assets/js/jquery.PrintArea.js')?>"></script>  
     	<script src="<?php echo base_url('assets/js/gScript.js')?>"></script>
-    	<!-- <script src="<?php echo base_url('assets/js/bootstrap-timepicker.js')?>"></script> -->
+    	<!-- <script src="<?php //echo base_url('assets/js/bootstrap-timepicker.js')?>"></script> -->
     	<script type="text/javascript" src="<?php echo base_url('assets/js/zoomable/zoomsl-3.0.min.js') ?>"></script>
     	<!-- -----------------upload---------- -->
-    	<!-- <link href="<?php echo base_url('assets/js/upload/jquery.filer.css') ?>" type="text/css" rel="stylesheet" /> -->
-		<!-- <link href="<?php echo base_url('assets/js/upload/themes/jquery.filer-dragdropbox-theme.css') ?>" type="text/css" rel="stylesheet" /> -->
-		<!-- <script type="text/javascript" src="<?php echo base_url('assets/js/upload/jquery.filer.js') ?>"></script> -->
+    	<!-- <link href="<?php //echo base_url('assets/js/upload/jquery.filer.css') ?>" type="text/css" rel="stylesheet" /> -->
+		<!-- <link href="<?php //echo base_url('assets/js/upload/themes/jquery.filer-dragdropbox-theme.css') ?>" type="text/css" rel="stylesheet" /> -->
+		<!-- <script type="text/javascript" src="<?php //echo base_url('assets/js/upload/jquery.filer.js') ?>"></script> -->
 		<!-- =====================export pdf=========== -->
-		<!-- <script type="text/javascript" src="<?php echo base_url('assets/js/jspdf.js') ?>"></script> -->
-		<!-- <script type="text/javascript" src="<?php echo base_url('assets/js/FileSaver.js') ?>"></script> -->
-		<!-- <script type="text/javascript" src="<?php echo base_url('assets/js/pdf/from_html.js') ?>"></script> -->
-		<!-- <script type="text/javascript" src="<?php echo base_url('assets/js/pdf/standard_fonts_metrics.js') ?>"></script> -->
-		<!-- <script type="text/javascript" src="<?php echo base_url('assets/js/pdf/split_text_to_size.js') ?>"></script> -->
+		<!-- <script type="text/javascript" src="<?php //echo base_url('assets/js/jspdf.js') ?>"></script> -->
+		<!-- <script type="text/javascript" src="<?php //echo base_url('assets/js/FileSaver.js') ?>"></script> -->
+		<!-- <script type="text/javascript" src="<?php //echo base_url('assets/js/pdf/from_html.js') ?>"></script> -->
+		<!-- <script type="text/javascript" src="<?php //echo base_url('assets/js/pdf/standard_fonts_metrics.js') ?>"></script> -->
+		<!-- <script type="text/javascript" src="<?php //echo base_url('assets/js/pdf/split_text_to_size.js') ?>"></script> -->
 
 		<!-- ========================================Number slep================== -->
-		<!-- <link href="<?php echo base_url('assets/js/number_slep/jquery.stepper.min.css') ?>" type="text/css" rel="stylesheet" /> -->
-		<!-- <script type="text/javascript" src="<?php echo base_url('assets/js/number_slep/jquery.stepper.js') ?>"></script> -->
+		<!-- <link href="<?php //cho base_url('assets/js/number_slep/jquery.stepper.min.css') ?>" type="text/css" rel="stylesheet" /> -->
+		<!-- <script type="text/javascript" src="<?php //echo base_url('assets/js/number_slep/jquery.stepper.js') ?>"></script> -->
 		<!-- =============loding========== -->
 		<!-- <script type="text/javascript" src="<?php echo base_url('assets/js/loading/loading.js') ?>"></script> -->
 		<script src="<?php echo base_url();?>ckeditor/ckeditor.js" type="text/javascript" language="javascript" charset="UTF-8"></script>
 		<script src="<?php echo base_url();?>assets/js/fileinput.js" type="text/javascript" language="javascript" charset="UTF-8"></script>
-		<!-- <script src="<?php echo base_url();?>assets/js/js_star/star-rating.js" type="text/javascript"></script> -->
+		<!-- <script src="<?php //echo base_url();?>assets/js/js_star/star-rating.js" type="text/javascript"></script> -->
 	</head>	
 	<body data-color="grey" class="flat">
 		<div id="wrapper">

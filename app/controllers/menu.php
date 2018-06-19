@@ -114,14 +114,14 @@ class Menu extends CI_Controller {
 
 		$data_store = array(
 		'menu_name' => $this->input->post('menu_name'),
-      'menu_name_kh' => $this->input->post('menu_name_kh'), 
-      'article_id' => $this->input->post('article_id'),
-      'parentid' => $this->input->post('parent_id'),
-      'layout_id' => $this->input->post('layout'),
-      'location_id' => $this->input->post('location_id'),
-      'menu_type' => $this->input->post('menu_type'),
-      'order' => $this->input->post('order'),
-      'is_active' => $this->input->post('is_active')
+      	'menu_name_kh' => $this->input->post('menu_name_kh'), 
+	    'article_id' => $this->input->post('article_id'),
+	    'parentid' => $this->input->post('parent_id'),
+	    'layout_id' => $this->input->post('layout'),
+	    'location_id' => $this->input->post('location_id'),
+	    'menu_type' => $this->input->post('menu_type'),
+	    'order' => $this->input->post('order'),
+	    'is_active' => $this->input->post('is_active')
 		);
 
 		$count = $this->men->vaidate($menu_name,$is_active,$menu_type,$menu_id);
