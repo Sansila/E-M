@@ -112,8 +112,6 @@ class article extends CI_Controller {
 		unlink("./assets/upload/article/thumb/".$row->article_id.'_'.$row->url);
 		unlink("./assets/upload/article/".$row->article_id.'_'.$row->url);
 		$this->db->where('gallery_id',$id)->delete('tblgallery');
-
-
 	}
 	function contactdata(){
 		$perpage=$this->input->post('perpage');
@@ -227,6 +225,7 @@ class article extends CI_Controller {
 	}
 	
 	function creatthumb($productid,$imagename,$order){
+		    echo $imagename;
 			$data = array('upload_data' => $this->upload->data());
 		 	$config2['image_library'] = 'gd2';
             $config2['source_image'] = $this->upload->upload_path.$this->upload->file_name;
@@ -269,7 +268,8 @@ class article extends CI_Controller {
 	function saveimg($productid,$imagename){
 		$date=date('Y-m-d H:i:s');
 		$user=$this->session->userdata('user_name');
-		$count=$this->db->query("SELECT count(*) as count FROM tblgallery where article_id='$productid' AND url='$imagename'")->row()->count;
+		$count=$this->db->query("SELECT count(*) as count FROM tblgallery where article_id='$productid' 
+			                     AND url='$imagename'")->row()->count;
 		if($count==0){
 			$data=array('article_id'=>$productid,
 						'url'=>$imagename,

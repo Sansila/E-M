@@ -98,7 +98,7 @@
                             <label class='col-lg-2 control-label'>Orders</label>
                             <div class=" col-lg-3"> 
                                 <div class="col-md-12">
-                                    <input type="text"  class="form-control input-sm" name="orders" value='<?php echo isset($data->orders)?$data->orders:""; ?>' id="orders">
+                                    <input type="number" class="form-control input-sm" name="orders" value='<?php echo isset($data->orders)?$data->orders:""; ?>' id="orders">
                                 </div>                   
                             </div>
                            <!--  <label class='col-lg-2 control-label'>Is Active</label>
@@ -113,7 +113,7 @@
                             <label class='col-lg-2 control-label'>Link</label>
                             <div class=" col-lg-3"> 
                                 <div class="col-md-12">
-                                    <input type="text"  class="form-control input-sm" name="link" value='<?php echo isset($data->link)?$data->link:""; ?>' id="link">
+                                    <input type="number" class="form-control input-sm" name="link" value='<?php echo isset($data->link)?$data->link:""; ?>' id="link">
                                 </div>                   
                             </div>
                             <label class='col-lg-2 control-label'>Images</label>

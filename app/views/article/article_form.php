@@ -267,35 +267,7 @@
               })
         $(this).closest('.saouy').remove();
     })
-    function uploads(article_id,formdata,msg){
-        //alert(visitid+'/'+familyid);
-        $.ajax({
-            type:'POST',
-            url:"<?PHP echo site_url('article/upload');?>/"+article_id,
-            data:formdata,
-            cache:false,
-            contentType: false,
-            processData: false,
-            success:function(data){
-                toasmsg('success',msg);
-
-                location.reload();
-                //location.href="<?php echo site_url('article/index/?m='.$m.'&p='.$p) ?>";
-
-                console.log("success");
-                console.log(data);
-            },
-            error: function(data){
-                console.log("error");
-                console.log(data);
-                location.reload();
-                
-                //location.href="<?php echo site_url('article/index/?m='.$m.'&p='.$p) ?>";
-
-            }
-        });
-       
-    } 
+    
     $('#cancel').click(function(){
         location.href="<?PHP echo site_url('store/store/index');?>?<?php echo 'm=$m&p=$p' ?>";
     }) 
@@ -312,8 +284,7 @@
     // Form Validation
     $("#basic_validate").submit(function(e){
       e.preventDefault();
-    })
-    .validate({
+    }).validate({
         rules:{
           required:{
             required:true
@@ -372,13 +343,10 @@
                     is_marguee:is_marguee
                 },
                 success:function(data) {
-                    // $(".result_text").html(data.msg);
                     var formdata = new FormData(form);
 
                     if(data.article_id!='' && data.article_id!=null){
                         uploads(data.article_id,formdata,data.msg);
-                        // toasmsg('success',data.msg);
-                        // location.href='<?php echo site_url("article/index?m=".$m.'&p='.$p) ?>';
                     }else{
                         toasmsg('error',data.msg);
                     }
@@ -388,6 +356,29 @@
           }, 500);
         }
       });
+
+    function uploads(article_id,formdata,msg){
+        $.ajax({
+            type:'POST',
+            url:"<?PHP echo site_url('article/upload')?>/"+article_id,
+            data:formdata,
+            cache:false,
+            contentType: false,
+            processData: false,
+            success:function(data){
+                toasmsg('success',msg);
+                location.reload();
+                console.log("success");
+                console.log(data);
+            },
+            error: function(data){
+                console.log("error");
+                console.log(data);
+                location.reload();
+            }
+        });
+       
+    } 
 
 
     $("#is_active").on("click",function(){      
@@ -433,7 +424,7 @@
             
       }); 
     // CKEDITOR.replace('contents',{
-    //   filebrowserBrowseUrl: "<?php echo base_url(); ?>ckfinder/ckfinder.html?resourceType=Files"
+    //   filebrowserBrowseUrl: "<?php //echo base_url(); ?>ckfinder/ckfinder.html?resourceType=Files"
     // });
     // CKFinder.setupCKEditor();
 
