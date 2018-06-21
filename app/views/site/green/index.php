@@ -124,7 +124,7 @@
                                                       $link = site_url('site/templates').'/'.$parentid;
                                                     }
                                                     $s = "
-                                                        <li class='active'>
+                                                        <li>
                                                             <a href='".$link."'>
                                                             ".$submenuname."
                                                             </a>

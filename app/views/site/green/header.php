@@ -39,3 +39,32 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
+    <style type="text/css">
+        .collapse ul li > ul {
+            list-style: none;
+            margin: 0;
+            padding: 5px 0;
+            top: 80%;
+            border-radius: 0 0 4px 4px;
+            position: absolute;
+            width: 230px;
+            visibility: hidden;
+            opacity: 0;
+            background: #fff;
+            z-index: 100;
+            border-bottom: 3px solid;
+            -webkit-box-shadow: inset 0px 2px 3px 0px rgba(50, 50, 50, 0.24);
+            -moz-box-shadow: inset 0px 2px 3px 0px rgba(50, 50, 50, 0.24);
+            box-shadow: inset 0px 2px 3px 0px rgba(50, 50, 50, 0.24);
+            }
+            .collapse ul li:hover > ul {
+            visibility: visible;
+            opacity: 1;
+            top: 100%;
+            }
+            .collapse ul li > ul li{
+                width: 100%;
+                text-align: center;
+                padding: 10px 0px 0 0;
+            }
+    </style>
