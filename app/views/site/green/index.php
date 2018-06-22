@@ -167,7 +167,7 @@
                         <div class="carousel-caption">
                             <div class="slider_text">
                                 <h3>Protect</h3>
-                                <h2>nature the environment</h2>
+                                <h2><?=$loadbanner->title?></h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                 <a href="" class="custom_btn">Read  More</a>
                             </div>
@@ -181,7 +181,7 @@
                         <div class="carousel-caption">
                             <div class="slider_text">
                                 <h3>Protect</h3>
-                                <h2>nature the environment</h2>
+                                <h2><?=$loadbanner->title?></h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                 <a href="" class="custom_btn">Read  More</a>
                             </div>
@@ -195,7 +195,7 @@
                         <div class="carousel-caption">
                             <div class="slider_text">
                                 <h3>Protect</h3>
-                                <h2>nature the environment</h2>
+                                <h2><?=$loadbanner->title?></h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                 <a href="" class="custom_btn">Read  More</a>
                             </div>

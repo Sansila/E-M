@@ -296,7 +296,7 @@ class modsite extends CI_Model {
   }
   function loadbanner()
   {
-    
+    $query = "SELECT * FROM tblbanner";
   }
 
 }
