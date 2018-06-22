@@ -67,6 +67,7 @@ a{
               </div>
 
             </div>
+           
             <div class="form-group">
               <label class='col-lg-2 control-label'>Menu Name (Khmer)</label>
               <div class="col-lg-5"> 
@@ -75,6 +76,14 @@ a{
                 </div>                   
               </div>
 
+            </div>
+            <div class="form-group">
+              <label class='col-lg-2 control-label'>Link</label>
+              <div class="col-lg-5"> 
+                <div class="col-md-12">
+                  <input type="text"  class="form-control input-sm required" name="link" value='<?php echo isset($row->link)?"$row->link":""; ?>' id="link">
+                </div>                   
+              </div>
             </div>
             <div class="form-group hide">
               <label class='col-lg-2 control-label'>Location</label>
@@ -323,7 +332,8 @@ a{
             menu_type:$("#menu_type").val(),
             article_id:$("#article_id").val(),
               // layout:$("#layout").val(),
-              is_active:is_active
+            is_active:is_active,
+            link:$('#link').val()
             },
             success:function(data) {
               // $(".result_text").html(data.msg);

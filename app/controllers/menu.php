@@ -121,7 +121,8 @@ class Menu extends CI_Controller {
 	    'location_id' => $this->input->post('location_id'),
 	    'menu_type' => $this->input->post('menu_type'),
 	    'order' => $this->input->post('order'),
-	    'is_active' => $this->input->post('is_active')
+	    'is_active' => $this->input->post('is_active'),
+	    'link' => $this->input->post('link')
 		);
 
 		$count = $this->men->vaidate($menu_name,$is_active,$menu_type,$menu_id);

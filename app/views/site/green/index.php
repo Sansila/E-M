@@ -75,19 +75,19 @@
                                 }
                                 $link = '#';
                                 if($menu_type == 10) {
-                                $link = site_url('site/allcustomer/'.$men->menu_id);
+                                $link = site_url($men->link.''.$men->menu_id);
                                 }else if($menu_type == 9) {
-                                $link = site_url('site/allservice/'.$men->menu_id);
+                                $link = site_url($men->link.''.$men->menu_id);
                                 }else if($menu_type == 3) {
-                                $link = site_url('site/requestquote/'.$men->menu_id);
+                                $link = site_url($men->link.''.$men->menu_id);
                                 }else if($menu_type == 4) {
-                                $link = site_url('site/contactus/'.$men->menu_id);
+                                $link = site_url($men->link.''.$men->menu_id);
                                 }else if($menu_type == 6) {
-                                $link = site_url('site/allproduct/'.$men->menu_id);
+                                $link = site_url($men->link.''.$men->menu_id);
                                 }else if($menu_type == 7) {
-                                $link = site_url('site/aboutus/'.$men->menu_id);
+                                $link = site_url($men->link.''.$men->menu_id);
                                 }else if($menu_type == 11) {
-                                $link = site_url('site/templates/'.$men->menu_id);
+                                $link = site_url($men->link.''.$men->menu_id);
                                 }
                                 
                                 // $b=$this->uri->segment(3);
