@@ -17,7 +17,7 @@
 	.cur_sort_down{
 		background-image: url('<?php echo base_url('assets/images/icons/sort-down.png')?>');
 		background-position: left;
-		background-repeat: no-repeat;
+		background-repeat: no-repeat !important;
 		padding-left: 15px !important;
 	}
 </style>
