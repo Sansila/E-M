@@ -102,6 +102,7 @@ class Site extends CI_Controller {
       		$datas['event_getuptemplate_home'] = $this->sites->getuptemplate_home();
       		$datas['rowgetoutproduct'] = $this->sites->getoutproduct();
       		$datas['rowgetproductdescription'] = $this->sites->getproductdescription();
+      		$datas['loadbanner'] = $this->sites->loadbanner();
 		}
 		$this->load->view('site/green/index',$datas);
 		//$this->load->view('site/home',$datas); //used before
