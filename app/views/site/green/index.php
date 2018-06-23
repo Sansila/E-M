@@ -155,54 +155,47 @@
         <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
             <!-- Indicators -->
             <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <?php 
+                    $i=0;
+                    foreach ($loadbanner as $slide) 
+                    {  
+                        $active = "";
+                        if($i==0){
+                            $active .= "active"; 
+                        }
+                ?>
+                    <li data-target="#carousel-example-generic" data-slide-to="<?php echo $i;?>" class="<?php echo $active?>"></li>
+                <?php 
+                    $i++;
+                    }
+                ?>
             </ol>
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <div class="slider_overlay">
-                        <img src="<?=base_url().'assets/green/'?>img/img1.jpg" alt="...">
-                        <div class="carousel-caption">
-                            <div class="slider_text">
-                                <h3>Protect</h3>
-                                <h2><?=$loadbanner->title?></h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a href="" class="custom_btn">Read  More</a>
+                <?php 
+                    $i = 0;
+                    foreach ($loadbanner as $slide) 
+                    { 
+                        $active = "";
+                        if($i==0){
+                            $active .= "active"; 
+                        }
+                        
+                ?>
+                    <div class="item <?php echo $active;?>">
+                        <div class="slider_overlay">
+                            <img src="<?=base_url().'assets/upload/banner/'.$slide->banner_id.'.png'?>" alt="...">
+                            <div class="carousel-caption">
+                                <div class="slider_text">
+                                    <?php echo $slide->title?>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!--End of item With Active-->
-                <div class="item">
-                    <div class="slider_overlay">
-                        <img src="<?=base_url().'assets/green/'?>img/img2.jpg" alt="...">
-                        <div class="carousel-caption">
-                            <div class="slider_text">
-                                <h3>Protect</h3>
-                                <h2><?=$loadbanner->title?></h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a href="" class="custom_btn">Read  More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End of Item-->
-                <div class="item">
-                    <div class="slider_overlay">
-                        <img src="<?=base_url().'assets/green/'?>img/img3.jpg" alt="...">
-                        <div class="carousel-caption">
-                            <div class="slider_text">
-                                <h3>Protect</h3>
-                                <h2><?=$loadbanner->title?></h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a href="" class="custom_btn">Read  More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End of item-->
+                <?php
+                    $i++; 
+                    }
+                ?>
             </div>
             <!--End of Carousel Inner-->
         </div>
@@ -214,69 +207,36 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="wel_header">
-                        <h2>welcome to green fair</h2>
-                        <p>Our Green Fire Organization is one of the non profit organization near you. Get our services like</p>
+                        <?php 
+                            $sql = $this->db->query("SELECT * FROM tbllocation WHERE location_id = 18 AND is_active = 1")->row();
+                            echo $sql->location_name;
+                        ?>
                     </div>
                 </div>
             </div>
             <!--End of row-->
             <div class="row">
+                <?php
+                    $sql = $this->db->query("SELECT * FROM tblarticle WHERE location_id = 18 AND is_active = 1 ")->result();
+                    foreach ($sql as $item) {
+                ?>
+
                 <div class="col-md-3">
                     <div class="item">
                         <div class="single_item">
                             <div class="item_list">
-                                <div class="welcome_icon">
-                                    <i class="fa fa-leaf"></i>
-                                </div>
-                                <h4>eco system</h4>
-                                <p>Lorem ipsum dolor sit amet, eu qui modo expetendis reformidans ex sit set appetere sententiae seo eum in simul homero.</p>
+                                <?php 
+                                    echo $item->article_title;
+                                    echo $item->content;
+                                ?>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--End of col-md-3-->
-                <div class="col-md-3">
-                    <div class="item">
-                        <div class="single_item">
-                            <div class="item_list">
-                                <div class="welcome_icon">
-                                    <i class="fa fa-refresh"></i>
-                                </div>
-                                <h4>recycling</h4>
-                                <p>Lorem ipsum dolor sit amet, eu qui modo expetendis reformidans ex sit set appetere sententiae seo eum in simul homero.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End of col-md-3-->
-                <div class="col-md-3">
-                    <div class="item">
-                        <div class="single_item">
-                            <div class="item_list">
-                                <div class="welcome_icon">
-                                    <i class="fa fa-tint"></i>
-                                </div>
-                                <h4>water refine</h4>
-                                <p>Lorem ipsum dolor sit amet, eu qui modo expetendis reformidans ex sit set appetere sententiae seo eum in simul homero.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End of col-md-3-->
-                <div class="col-md-3">
-                    <div class="item">
-                        <div class="single_item">
-                            <div class="item_list">
-                                <div class="welcome_icon">
-                                    <i class="fa fa-cog"></i>
-                                </div>
-                                <h4>solar system</h4>
-                                <p>Lorem ipsum dolor sit amet, eu qui modo expetendis reformidans ex sit set appetere sententiae seo eum in simul homero.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End of col-md-3-->
+                <?php 
+                    }
+                ?>
             </div>
             <!--End of row-->
         </div>
@@ -310,8 +270,10 @@
     <section id="portfolio" class="text-center">
         <div class="col-md-12">
             <div class="portfolio_title">
-                <h2>our latest work</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <?php 
+                    $sql1 = $this->db->query("SELECT * FROM tbllocation WHERE location_id = 19 AND is_active = 1")->row();
+                    echo $sql1->location_name;
+                ?>
             </div>
         </div>
         <!--End of col-md-2-->
@@ -320,26 +282,17 @@
                 <div class="row">
                     <form action="/">
                         <ul id="portfolio_menu" class="menu portfolio_custom_menu">
-                            <li>
-                                <button data-filter="*" class="my_btn btn_active">Show All</button>
-                            </li>
-                            <li>
-                                <button data-filter=".blue, .black, .green" class="my_btn">environment</button>
-                            </li>
-                            <li>
-                                <button data-filter=".red, .green" class="my_btn">climate</button>
-                            </li>
-                            <li>
-                                <button data-filter=".blue, .yellow, .black" class="my_btn">photography</button>
-                            </li>
-                            <li>
-                                <button data-filter=".black" class="my_btn">species</button>
-                                <!--
-                            </li>
-                            <li>
-                                <button data-filter=".black" class="my_btn">Black</button>
-                            </li>
-                            -->
+                            <?php
+                                $sql1 = $this->db->query("SELECT * FROM tblarticle WHERE location_id = 19 AND is_active = 1 ")->result();
+                                foreach ($sql1 as $item1) {
+                            ?>
+                                <li>
+                                    <?php echo $item1->article_title;?>
+                                </li>
+                            <?php 
+                                }
+                            ?>
+
                         </ul>
                         <!--End of portfolio_menu-->
                     </form>
@@ -466,112 +419,97 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="event_header text-center">
-                        <h2>latest event</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <?php 
+                            $sql = $this->db->query("SELECT * FROM tbllocation WHERE location_id = 21 AND is_active = 1")->row();
+                            echo $sql->location_name;
+                        ?>
                     </div>
                 </div>
             </div>
             <!--End of row-->
             <div class="row">
                 <div class="col-md-8">
+
+                    <?php
+                        $sql2 = $this->db->query("SELECT * FROM tblarticle as a 
+                            inner join tblgallery as g on a.article_id = g.article_id
+                            WHERE a.location_id = 21 AND a.is_active = 1 ")->result();
+                        $i = 1;
+                        foreach ($sql2 as $item2) {
+                        if($i == 1)
+                        {
+                    ?>
                     <div class="row">
                         <div class="col-md-6 zero_mp">
                             <div class="event_item">
                                 <div class="event_img">
-                                    <img src="<?=base_url().'assets/green/'?>img/tree_cut_1.jpg" alt="">
+                                    <img src="<?=base_url().'assets/upload/article/'.$item2->article_id.'_'.$item2->url?>" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 zero_mp">
                             <div class="event_item">
                                 <div class="event_text text-center">
-                                    <a href=""><h4>One Tree Thousand Hope</h4></a>
-                                    <h6>15-16 May in Dhaka</h6>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adip scing elit. Lorem ipsum dolor sit amet,consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    <a href="" class="event_btn">read more</a>
+                                    <?php 
+                                        echo $item2->article_title;
+                                        echo $item2->content;
+                                    ?>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!--End of row-->
-                    <div class="row">
+                    <?php 
+                        }else{
+                    ?>
                         <div class="col-md-6 zero_mp">
                             <div class="event_item">
                                 <div class="event_text text-center">
-                                    <a href=""><h4>One Tree Thousand Hope</h4></a>
-                                    <h6>15-16 May in Dhaka</h6>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adip scing elit. Lorem ipsum dolor sit amet,consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    <a href="" class="event_btn">read more</a>
+                                    <?php 
+                                        echo $item2->article_title;
+                                        echo $item2->content;
+                                    ?>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 zero_mp">
                             <div class="event_item">
                                 <div class="event_img">
-                                    <img src="<?=base_url().'assets/green/'?>img/tree_cut_2.jpg" alt="">
+                                    <img src="<?=base_url().'assets/upload/article/'.$item2->article_id.'_'.$item2->url?>" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <?php
+                        }
+                        $i++;
+                        }
+                    ?>
+
                     <!--End of row-->
                 </div>
                 <!--End of col-md-8-->
                 <div class="col-md-4">
+                    <?php
+                        $sql4 = $this->db->query("SELECT * FROM tblarticle as a 
+                            inner join tblgallery as g on a.article_id = g.article_id
+                            WHERE a.location_id = 22 AND a.is_active = 1 ")->result();
+                        foreach ($sql4 as $item4) {
+                    ?>
                     <div class="event_news">
                         <div class="event_single_item fix">
                             <div class="event_news_img floatleft">
-                                <img src="<?=base_url().'assets/green/'?>img/tree_cut_3.jpg" alt="">
+                                <img src="<?=base_url().'assets/upload/article/'.$item4->article_id.'_'.$item4->url?>" alt="">
                             </div>
                             <div class="event_news_text">
-                                <a href="#"><h4>Let’s plant 200 tree each...</h4></a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veniam.</p>
+                                <?php 
+                                    echo $item4->article_title;
+                                    echo $item4->content;
+                                ?>
                             </div>
                         </div>
                     </div>
-                    <div class="event_news">
-                        <div class="event_single_item fix">
-                            <div class="event_news_img floatleft">
-                                <img src="<?=base_url().'assets/green/'?>img/tree_cut_4.jpg" alt="">
-                            </div>
-                            <div class="event_news_text">
-                                <a href="#"><h4>Keep your house envirome..</h4></a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veniam.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event_news">
-                        <div class="event_single_item fix">
-                            <div class="event_news_img floatleft">
-                                <img src="<?=base_url().'assets/green/'?>img/tree_cut_3.jpg" alt="">
-                            </div>
-                            <div class="event_news_text">
-                                <a href="#"><h4>Urgent Clothe Needed Needed</h4></a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veniam.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event_news">
-                        <div class="event_single_item fix">
-                            <div class="event_news_img floatleft">
-                                <img src="<?=base_url().'assets/green/'?>img/tree_cut_4.jpg" alt="">
-                            </div>
-                            <div class="event_news_text">
-                                <a href="#"><h4>One Tree Thousand Hope</h4></a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veniam.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event_news">
-                        <div class="event_single_item fix">
-                            <div class="event_news_img floatleft">
-                                <img src="<?=base_url().'assets/green/'?>img/tree_cut_3.jpg" alt="">
-                            </div>
-                            <div class="event_news_text">
-                                <a href="#"><h4>One Tree Thousand Hope</h4></a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veniam.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        }
+                    ?>
                 </div>
                 <!--End of col-md-4-->
             </div>
@@ -687,97 +625,40 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="latest_blog text-center">
-                        <h2>latest blog</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo cum libero vitae quos eaque commodi.</p>
+                        <?php 
+                            $sql = $this->db->query("SELECT * FROM tbllocation WHERE location_id = 20 AND is_active = 1")->row();
+                            echo $sql->location_name;
+                        ?>
                     </div>
                 </div>
             </div>
             <!--End of row-->
             <div class="row">
+                <?php
+                    $sql3 = $this->db->query("SELECT * FROM tblarticle as a 
+                        inner join tblgallery as g on a.article_id = g.article_id
+                        WHERE a.location_id = 20 AND a.is_active = 1 ")->result();
+                    foreach ($sql3 as $item3) {
+                ?>
                 <div class="col-md-4">
                     <div class="blog_news">
                         <div class="single_blog_item">
                             <div class="blog_img">
-                                <img src="<?=base_url().'assets/green/'?>img/climate_effect.jpg" alt="">
+                                <img src="<?=base_url().'assets/upload/article/'.$item3->article_id.'_'.$item3->url?>" alt="">
                             </div>
                             <div class="blog_content">
-                                <a href=""><h3>Climate change is affecting bird migration</h3></a>
-                                <div class="expert">
-                                    <div class="left-side text-left">
-                                        <p class="left_side">
-                                            <span class="clock"><i class="fa fa-clock-o"></i></span>
-                                            <span class="time">Aug 19, 2016</span>
-                                            <a href=""><span class="admin"><i class="fa fa-user"></i> Admin</span></a>
-                                        </p>
-                                        <p class="right_side text-right">
-                                            <a href=""><span class="right_msg text-right"><i class="fa fa-comments-o"></i></span>
-                                            <span class="count">0</span></a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <p class="blog_news_content">Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit. </p>
-                                <a href="" class="blog_link">read more</a>
+                                <?php 
+                                    echo $item3->article_title;
+                                    echo $item3->content;
+                                ?>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--End of col-md-4-->
-                <div class="col-md-4">
-                    <div class="blog_news">
-                        <div class="single_blog_item">
-                            <div class="blog_img">
-                                <img src="<?=base_url().'assets/green/'?>img/air_pollutuon.jpg" alt="">
-                            </div>
-                            <div class="blog_content">
-                                <a href=""><h3>How to avoid indoor air pollution?</h3></a>
-                                <div class="expert">
-                                    <div class="left-side text-left">
-                                        <p class="left_side">
-                                            <span class="clock"><i class="fa fa-clock-o"></i></span>
-                                            <span class="time">Aug 19, 2016</span>
-                                            <a href=""><span class="admin"><i class="fa fa-user"></i> Admin</span></a>
-                                        </p>
-                                        <p class="right_side text-right">
-                                            <a href=""><span class="right_msg text-right"><i class="fa fa-comments-o"></i></span>
-                                            <span class="count">0</span></a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <p class="blog_news_content">Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit. </p>
-                                <a href="" class="blog_link">read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End of col-md-4-->
-                <div class="col-md-4">
-                    <div class="blog_news">
-                        <div class="single_blog_item">
-                            <div class="blog_img">
-                                <img src="<?=base_url().'assets/green/'?>img/threat_bear.jpg" alt="">
-                            </div>
-                            <div class="blog_content">
-                                <a href=""><h3>Threat to Yellowstone’s grizzly bears.</h3></a>
-                                <div class="expert">
-                                    <div class="left-side text-left">
-                                        <p class="left_side">
-                                            <span class="clock"><i class="fa fa-clock-o"></i></span>
-                                            <span class="time">Aug 19, 2016</span>
-                                            <a href=""><span class="admin"><i class="fa fa-user"></i> Admin</span></a>
-                                        </p>
-                                        <p class="right_side text-right">
-                                            <a href=""><span class="right_msg text-right"><i class="fa fa-comments-o"></i></span>
-                                            <span class="count">0</span></a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <p class="blog_news_content">Lorem ipsum dolor sit amet, consectetur adipscing elit. Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. consectetur Lorem ipsum dolor sitamet, conse ctetur adipiscing elit. </p>
-                                <a href="" class="blog_link">read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--End of col-md-4-->
+
+                <?php 
+                    }
+                ?>
             </div>
             <!--End of row-->
         </div>

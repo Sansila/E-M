@@ -296,7 +296,8 @@ class modsite extends CI_Model {
   }
   function loadbanner()
   {
-    $query = "SELECT * FROM tblbanner";
+    $query = $this->db->query("SELECT * FROM tblbanner where location_id = 1 ")->result();
+    return $query;
   }
 
 }
