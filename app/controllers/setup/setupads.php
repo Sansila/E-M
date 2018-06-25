@@ -117,11 +117,11 @@ class SetupAds extends CI_Controller {
 			$table.= "<tr>
 				 <td class='no' style='text-align:center;'>".$i."</td>
 				 <td class='image' style='text-align:center;'><img style='height:45px; width:auto' src='".$img_path."' /></td>
-				 <td class='adstitle'>".$row->title."</td>
-				 <td class='adstitle'>".$row->location_name."</td>	
-				 
+				 <td class=''>".$row->title."</td>
+				 <td class=''>".$row->location_name."</td>	
+				
 				 <td class='remove_tag no_wrap' style='text-align:center;'>";
-				 
+				 // on tag td class i had remove adstitle from that class
 				 if($this->green->gAction("D")){
 					$table.= "<a><img rel=".$row->banner_id." onclick='deletestore(event);' src='".base_url('assets/images/icons/delete.png')."'/></a>";
 				 }

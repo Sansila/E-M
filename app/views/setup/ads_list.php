@@ -59,9 +59,10 @@
 											if($th=='Action')
 												echo "<th class='remove_tag'>".$th."</th>";
 											else
-												echo "<th class='sort $val no_wrap' onclick='sort(event);' rel='$val'>".$th."</th>";								
+												echo "<th class='sort  no_wrap' onclick='sort(event);' rel='$val'>".$th."</th>";								
 										}
 										?>
+										<!-- on else statement tag th class i had remove $val -->
 									</tr>
 									<tr class='remove_tag'>
 										<th></th>
