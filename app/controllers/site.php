@@ -109,6 +109,11 @@ class Site extends CI_Controller {
 		$this->load->view('site/green/footer'); 
 		//$this->load->view('site/footer'); //used before
 	}
+	function allitem($id=''){
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/items');
+		$this->load->view('site/green/footer');
+	}
 	function getcategory($id=''){
 		$lid=$id;
 		$datas['category'] = $this->sites->getcategory_id($lid);

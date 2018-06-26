@@ -787,6 +787,10 @@ section#counter {
 #blog p {
     display: inline-block;
 }
+#blog a {
+    float: right;
+    margin-top: 25px;
+}
 #blog .latest_blog {
 }
 #blog .latest_blog h2 {
