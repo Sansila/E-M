@@ -344,7 +344,7 @@
                 },
                 success:function(data) {
                     var formdata = new FormData(form);
-
+                    //console.log(formdata);
                     if(data.article_id!='' && data.article_id!=null){
                         uploads(data.article_id,formdata,data.msg);
                     }else{
@@ -358,6 +358,7 @@
       });
 
     function uploads(article_id,formdata,msg){
+      
         $.ajax({
             type:'POST',
             url:"<?PHP echo site_url('article/upload')?>/"+article_id,

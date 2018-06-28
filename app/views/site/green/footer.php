@@ -97,12 +97,7 @@
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>-->
-        <script src="<?=base_url().'assets/green/js/jquery-1.12.3.min.js'?>"></script>
-
-        <!--Counter UP Waypoint-->
-        <script src="<?=base_url().'assets/green/js/waypoints.min.js'?>"></script>
-        <!--Counter UP-->
-        <script src="<?=base_url().'assets/green/js/jquery.counterup.min.js'?>"></script>
+        
 
         <script>
             //for counter up

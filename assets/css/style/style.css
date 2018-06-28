@@ -563,6 +563,7 @@ textarea::-ms-input-placeholder
 .navbar-default .navbar-nav li a :hover{
     color: #82ca9c;
 }
+
 .navbar-default .collapse .login a{
     color: #82ca9c;
     border: 1px solid #82ca9c;

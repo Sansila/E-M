@@ -300,4 +300,15 @@ class modsite extends CI_Model {
     return $query;
   }
 
+  function loaditem()
+  {
+    $query = $this->db->query("SELECT * FROM tblarticle as a 
+                        inner join tblgallery as g on a.article_id = g.article_id
+                        WHERE a.location_id = 9 AND a.is_active = 1 ")->result();
+    return $query;
+  }
+  // function more_detail(){
+  //   $query = $this->db->query("SELECT tblarticle.*, tblmenus.menu_id, tblgallery.url FROM tblarticle LEFT JOIN tblgallery ON tblarticle.article_id=tblgallery.article_id LEFT JOIN tblmenus ON tblmenus.menu_type=tblarticle.location_id WHERE tblarticle.article_id='$article_id'  AND tblarticle.is_active=1")->result();
+  // }
+
 }

@@ -515,11 +515,11 @@
             <!--End of row-->
         </div>
         <!--End of container-->
-        <div class="item_btn">
+       
             <div class="col-md-offset-9 col-md-3"> 
                 <a href="site/allitem"><button type="button" class="btn btn-default">Read More</button> </a>
             </div>
-        </div>
+    
     </section>
     <!-- end of blog-->
     <!--Start of Purches-->

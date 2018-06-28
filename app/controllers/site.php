@@ -110,8 +110,17 @@ class Site extends CI_Controller {
 		//$this->load->view('site/footer'); //used before
 	}
 	function allitem($id=''){
+		$data['loaditem'] = $this->sites->loaditem();
 		$this->load->view('site/green/header');
-		$this->load->view('site/green/items');
+		$this->load->view('site/green/items',$data);
+		$this->load->view('site/green/footer');
+	}
+	function more_detail($article_id=''){
+		$query = "SELECT tblarticle.*, tblmenus.menu_id, tblgallery.url FROM tblarticle LEFT JOIN tblgallery ON tblarticle.article_id=tblgallery.article_id LEFT JOIN tblmenus ON tblmenus.menu_type=tblarticle.location_id WHERE tblarticle.article_id='$article_id'  AND tblarticle.is_active=1";
+		$data['content']=$this->db->query($query)->result();
+		$data['header']=$this->db->query($query)->row();
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/detail',$data);
 		$this->load->view('site/green/footer');
 	}
 	function getcategory($id=''){
