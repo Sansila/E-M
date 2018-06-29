@@ -1,3 +1,10 @@
+<style type="text/css">
+    .row span {
+        style="color: rgb(102, 102, 102); 
+        font-family: Verdana, Geneva, sans-serif; 
+        font-size: 13px;
+    }
+</style>
 <section id="blog">
     <div class="container">
         <div class="row">
@@ -32,8 +39,9 @@
                     <?php }?>
                     </div><br>
                     <div class="row">
-                        
+                        <div class="">
                         <?php echo $header->content;?>
+                        </div>
                     </div>
                 </div>
             </div>
