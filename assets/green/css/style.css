@@ -105,8 +105,8 @@ font-family: 'Roboto', sans-serif;
     background: #fff;
     z-index: 100;
     border-bottom: 3px solid;
-    -webkit-box-shadow: inset 0px 2px 3px 0px rgba(50, 50, 50, 0.24);
-    -moz-box-shadow: inset 0px 2px 3px 0px rgba(50, 50, 50, 0.24);
+    /*-webkit-box-shadow: inset 0px 2px 3px 0px rgba(50, 50, 50, 0.24);*/
+    /*-moz-box-shadow: inset 0px 2px 3px 0px rgba(50, 50, 50, 0.24);*/
     box-shadow: inset 0px 2px 3px 0px rgba(50, 50, 50, 0.24);
 }
 .collapse ul li:hover > ul {
@@ -390,6 +390,7 @@ input: -webkit-autofill:focus {
 .carousel-fade .carousel-control {
     z-index: 2;
 }
+
 
 /*Welcome Section*/
 #welcome {

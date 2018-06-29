@@ -123,6 +123,73 @@ class Site extends CI_Controller {
 		$this->load->view('site/green/detail',$data);
 		$this->load->view('site/green/footer');
 	}
+	function commercailproject(){
+		$data['loaditem'] = $this->sites->loaditem();
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/commercail_project',$data);
+		$this->load->view('site/green/footer');
+	}
+	function commercaildetail($article_id=''){
+		$data['content']=$this->sites->load_detail($article_id)->result();
+		$data['header']=$this->sites->load_detail($article_id)->row();
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/commercail_project_detail',$data);
+		$this->load->view('site/green/footer');
+	}
+	function educationproject(){
+		$data['loaditem'] = $this->sites->loaditem();
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/educationproject',$data);
+		$this->load->view('site/green/footer');
+	}
+	function educationdetail($article_id=''){
+		$data['content']=$this->sites->load_detail($article_id)->result();
+		$data['header']=$this->sites->load_detail($article_id)->row();
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/educationproject_detail',$data);
+		$this->load->view('site/green/footer');
+	}
+	
+	function federalproject(){
+		$data['loaditem'] = $this->sites->loaditem();
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/federalproject',$data);
+		$this->load->view('site/green/footer');
+	}
+	function federaldetail($article_id=''){
+		$data['content']=$this->sites->load_detail($article_id)->result();
+		$data['header']=$this->sites->load_detail($article_id)->row();
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/federalproject_detail',$data);
+		$this->load->view('site/green/footer');
+	}
+	function healtcareproject(){
+		$data['loaditem'] = $this->sites->loaditem();
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/healtcare_project',$data);
+		$this->load->view('site/green/footer');
+	}
+	function healtcaredetail($article_id=''){
+		$data['content']=$this->sites->load_detail($article_id)->result();
+		$data['header']=$this->sites->load_detail($article_id)->row();
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/healtcareproject_detail',$data);
+		$this->load->view('site/green/footer');
+	}
+	function historicalrenovation(){
+		$data['loaditem'] = $this->sites->loaditem();
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/historicalrenovation',$data);
+		$this->load->view('site/green/footer');
+	}
+	function historicaldetail($article_id=''){
+		$data['content']=$this->sites->load_detail($article_id)->result();
+		$data['header']=$this->sites->load_detail($article_id)->row();
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/historical_renovation_detail',$data);
+		$this->load->view('site/green/footer');
+	}
+
 	function getcategory($id=''){
 		$lid=$id;
 		$datas['category'] = $this->sites->getcategory_id($lid);

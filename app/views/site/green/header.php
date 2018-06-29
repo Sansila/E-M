@@ -45,6 +45,13 @@
         text-overflow: ellipsis;
         font-size: 15px;
     }
+    .dropdown-ul {
+        text-decoration-color: black;
+    }
+    .dropdown-ul li a{
+        /*padding-left: 15px;*/
+        /*float: left;*/
+    }
     </style>
 
 <!-- <body data-spy="scroll" data-target="#header"> -->
@@ -123,21 +130,29 @@
                                 }else{
                                 $menu_type='';
                                 }
+
+                                if($men->link !="")
+                                {
+                                    $link = site_url($men->link.'/'.$men->menu_id);
+                                }else
+                                {
+                                    $link = "";
+                                }
                                 //$link = '#';
                                 if($menu_type == 10) {
-                                $link = site_url($men->link.'/'.$men->menu_id);
+                                $link = $link;
                                 }else if($menu_type == 9) {
-                                $link = site_url($men->link.'/'.$men->menu_id);
+                                $link = $link;
                                 }else if($menu_type == 3) {
-                                $link = site_url($men->link.'/'.$men->menu_id);
+                                $link = $link;
                                 }else if($menu_type == 4) {
-                                $link = site_url($men->link.'/'.$men->menu_id);
+                                $link = $link;
                                 }else if($menu_type == 6) {
-                                $link = site_url($men->link.'/'.$men->menu_id);
+                                $link = $link;
                                 }else if($menu_type == 7) {
-                                $link = site_url($men->link.'/'.$men->menu_id);
+                                $link = $link;
                                 }else if($menu_type == 11) {
-                                $link = site_url($men->link.'/'.$men->menu_id);
+                                $link = $link;
                                 }
                                 
                                 // $b=$this->uri->segment(3);
@@ -152,22 +167,35 @@
                                 }
                                 ?>
                                 <li class="<?=$active?> dropdown-icon">
-                                    <a href="<?=$link?>"><i class="" ></i><?=$men_name?></a>
+                                    <?php 
+                                        if($men->link !="")
+                                        {
+                                    ?>
+                                        <a href="<?=$link?>">
+                                    <?php
+                                        }else{
+                                    ?>
+                                        <a>
+                                    <?php
+                                        }
+                                    ?>
+                                    
+                                    <i class="" ></i><?=$men_name?></a>
                                     <?php
                                     $sql_sub = "SELECT * FROM tblmenus WHERE is_active=1 AND level=1 AND parentid ='$parentid' ORDER BY tblmenus.order ASC ";
                                     $sub_menus = $this->db->query($sql_sub)->result();
                                     if(count($sub_menus)>0){
                                     ?>
-                                    <ul>
+                                    <ul class="dropdown-ul">
                                         <?php
                                         
                                         foreach($sub_menus as $l_1){
                                         $submenuname=$l_1->menu_name;
                                         $link = '#';
                                         if($l_1->article_id != 0){
-                                        $link = site_url('site/templates').'/'.$parentid;
+                                        $link = site_url($l_1->link).'/'.$parentid;
                                         }else{
-                                        $link = site_url('site/templates').'/'.$parentid;
+                                        $link = site_url($l_1->link).'/'.$parentid;
                                         }
                                         $s = "
                                         <li>
