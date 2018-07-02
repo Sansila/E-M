@@ -164,7 +164,7 @@ class Site extends CI_Controller {
 		$this->load->view('site/green/footer');
 	}
 	function healtcareproject(){
-		$data['loaditem'] = $this->sites->loaditem();
+		$data['loaditem'] = $this->sites->healtcare();
 		$this->load->view('site/green/header');
 		$this->load->view('site/green/menu_project/healtcare_project',$data);
 		$this->load->view('site/green/footer');

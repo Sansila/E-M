@@ -36,23 +36,7 @@
         <script src="<?=base_url().'assets/green/js/jquery.counterup.min.js'?>"></script>
 
     </head>
-    <style type="text/css">
-    .truncate{
-        width: 300px;
-        height: 150px;
-        white-space: pre-wrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: 15px;
-    }
-    .dropdown-ul {
-        text-decoration-color: black;
-    }
-    .dropdown-ul li a{
-        /*padding-left: 15px;*/
-        /*float: left;*/
-    }
-    </style>
+   
 
 <!-- <body data-spy="scroll" data-target="#header"> -->
     <body>

@@ -26,10 +26,10 @@
                             <img src="<?=base_url().'assets/upload/article/'.$item->article_id.'_'.$item->url;?>" alt="">
                         </div>
                         <div class="blog_content">
-                            <h2><bold>
+                            <h2 style="text-align: center;"><bold>
                             <?php echo $item->article_title;?>
                             </bold></h2>
-                            <h3><?php echo $item->content;?></h3>
+                            <div class="truncate"><?php echo $item->content;?></div>
                             <a class="blog_link" style="cursor:pointer; margin: 0; float: left;" href="<?= site_url('site/healtcaredetail/'.$item->article_id); ?>">read more</a></p>
                         </div>
                     </div>
