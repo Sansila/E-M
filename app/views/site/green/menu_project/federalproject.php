@@ -29,7 +29,7 @@
                             <h2 style="text-align: center;"><bold>
                             <?php echo $item->article_title;?>
                             </bold></h2>
-                            <div class="truncate">><?php echo $item->content;?></div>
+                            <div class="truncate"><?php echo $item->content;?></div>
                             <a class="blog_link" style="cursor:pointer; margin: 0; float: left;" href="<?= site_url('site/federaldetail/'.$item->article_id); ?>">read more</a></p>
                         </div>
                     </div>

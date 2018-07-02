@@ -13,6 +13,9 @@
         color: #222222;
         text-align: center;
     }
+    .border{
+        border-bottom: 2px solid black;
+    }
      .content-p{
         position: relative;
         font-size: 18px;
@@ -24,6 +27,19 @@
 </style>
 <section id="blog">
     <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-8">
+                    <div class="inner-page-heading h-white style-2">
+                        <h2 class="detail_title"><?php  echo $header->article_title;?></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="border">
+                </div>
+            </div>     
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="blog_news" style="margin: 13px 0">
@@ -54,14 +70,7 @@
                     
                     </div><br>
                     <div class="row">
-                        <div class="col-md-8">
-                            <div class="col-md-offset-2 col-md-8">
-                                <div class="inner-page-heading h-white style-2">
-                                    <h2 class="detail_title"><?php  echo $header->article_title;?></h2>
-                                    
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="col-md-8">
                             <div class="col-md-12">
                                 <div class="content-p">
