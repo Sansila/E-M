@@ -37,7 +37,19 @@
 
     </head>
    
-
+    <style type="text/css">
+        .truncate{
+        width: 300px;
+        height: 150px;
+        white-space: pre-wrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 15px;
+    }
+    .dropdown-ul {
+        text-decoration-color: black;
+    }
+    </style>
 <!-- <body data-spy="scroll" data-target="#header"> -->
     <body>
     <!--Start Hedaer Section-->
@@ -86,7 +98,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand custom_navbar-brand" href="#"><img src="<?=base_url().'assets/green/img/logo.png'?>" alt=""></a>
+                            <a class="navbar-brand custom_navbar-brand" href="<?=base_url('site/index')?>"><img src="<?=base_url().'assets/green/img/logo.png'?>" alt=""></a>
                         </div>
                         <!--End of navbar-header-->
                         <!-- Collect the nav links, forms, and other content for toggling -->
