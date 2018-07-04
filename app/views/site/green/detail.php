@@ -14,9 +14,7 @@
         text-align: center;
 
     }
-    .border{
-        border-bottom: 2px solid black;
-    }
+    
     .content-p{
         position: relative;
         font-size: 18px;

@@ -94,9 +94,90 @@
         </div>
         <!--End of container-->
     </section>
+<hr class="border">
+    <section id="ourcontent">
+        <div class="container">
+            <div class="row">
+                <?php foreach ($loadblog2 as $key) {
+
+                    if($key->article_id % 2==0){ 
+                ?>
+
+                        <div class="col-md-6">
+                            <h3 class="widget-title">
+                                <?php echo $key->article_title;?>
+                            </h3>
+                            <div class="undertitle-line"></div>
+                            <div class="textwidget">
+                                <?php echo $key->content;?>
+                                <h3><img src="<?=base_url().'assets/upload/article/'.$key->article_id.'_'.$key->url;?>"></h3>
+                            </div>
+                        </div>
+                <?php }  else {?>
+                        <div class="col-md-6">
+                            <h3 class="widget-title">
+                                <?php echo $key->article_title;?>
+                            </h3>
+                            <div class="undertitle-line"></div>
+                            <div class="textwidget">
+                                <p>
+                                    <img src="<?=base_url().'assets/upload/article/'.$key->article_id.'_'.$key->url;?>">
+                                </p>
+
+                                <?php echo $key->content; ?>
+                            </div>
+                        </div>
+             <?php  
+                
+                 }
+             }
+            ?>
+             </div>
+        </div>
+</section>
+                
+                <!-- <div class="col-md-6">
+                    <h3 class="widget-title">
+                        How can we help you?
+                    </h3>
+                    <div class="undertitle-line"></div>
+                    <div class="textwidget">
+                        <h5><i class="fa fa-check" style="color: #002fa4;"></i> Let's talk about your goals</h5>
+                        <p>
+                            Welcome to MEP Engineering. Client service is our number one passion. Yes, you’re in the right place: We deliver expert mechanical, electrical and plumbing project solutions. We use the latest technology to stay on the cutting edge of sustainable design practices. However, our 350 years of combined employee experience have taught us you need and want much more. You want a MEP partner who listens to you and who will work with you to achieve your vision.
+                        </p>
+                        <h5><i class="fa fa-check" style="color: #002fa4;"></i> What happens when you partner with MEP?</h5>
+                        <p> When you hire MEP Engineering, we take the time to discuss your project goals. We listen proactively. We ask questions. We make sure that we understand your needs. Then, we strategize with you to complete your project within budget and on time. We become your partner and you become ours.
+                        </p>
+                        <h3>
+                            <img src="<?=base_url().'assets/images/1462416449.png'?>">
+                        </h3>
+                    </div>
+                </div> -->
+                <!-- <div class="col-md-6">
+                    <h3 class="widget-title">
+                        Our people are our strength
+                    </h3>
+                    <div class="undertitle-line"></div>
+                    <div class="textwidget">
+                        <p>
+                            <img src="<?=base_url().'assets/images/3.jpg'?>">
+                        </p>
+                            <p><i class=" fa fa-check" style="color: #002fa4;"></i>
+                            Our team talent runs deep and covers multiple disciplines. You’ll find all the services you need to complete your project under our roof—from boiler plant design to power distribution systems. You’ll also discover that our commitment to accomplishing your goals brings out the very best in our teams. The synergy of a true partnership sparks innovation, commands diligence and unleashes renewed excitement.
+                        </p>
+                        <p style="padding-top: 15px;">These qualities draw from a strong culture established by our company founders in 2004. Working in a collaborative environment energizes our teams. It enables us to go the extra mile for your project. We strive for quality and follow trusted processes that help us work efficiently. We don’t let obstacles or excuses keep us from meeting deadlines. We follow through because your goals are our goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+
     <!--end of welcome section-->
     <!--Start of volunteer-->
-    <section id="volunteer">
+    <!-- <section id="volunteer">
         <div class="container">
             <div class="row vol_area">
                 <div class="col-md-8">
@@ -105,21 +186,21 @@
                         <p>Join Our Team And Help the world. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur.</p>
                     </div>
                 </div>
-                <!--End of col-md-8-->
+              
                 <div class="col-md-3 col-md-offset-1">
                     <div class="join_us">
                         <a href="" class="vol_cust_btn">join us</a>
                     </div>
                 </div>
-                <!--End of col-md-3-->
+                
             </div>
-            <!--End of row and vol_area-->
+            
         </div>
-        <!--End of container-->
-    </section>
+      
+    </section> -->
     <!--end of volunteer-->
     <!--Start of portfolio-->
-    <section id="portfolio" class="text-center">
+    <!-- <section id="portfolio" class="text-center">
         <div class="col-md-12">
             <div class="portfolio_title">
                 <?php 
@@ -127,9 +208,9 @@
                     echo $sql1->location_name;
                 ?>
             </div>
-        </div>
+        </div> -->
         <!--End of col-md-2-->
-        <div class="colum">
+        <!-- <div class="colum">
             <div class="container">
                 <div class="row">
                     <form action="/">
@@ -146,14 +227,14 @@
                             ?>
 
                         </ul>
-                        <!--End of portfolio_menu-->
+                      
                     </form>
-                    <!--End of Form-->
+               
                 </div>
-                <!--End of row-->
-            </div>
+           
+            </div> -->
             <!--End of container-->
-            <div class="container">
+            <!-- <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="notes">
@@ -188,19 +269,19 @@
                                 <img src="<?=base_url().'assets/green/'?>img/species.jpg" alt="">
                             </div>
                         </div>
-                        <!--End of notes-->
+                       
                     </div>
-                    <!--End of col-lg-12-->
+                    
                 </div>
-                <!--End of row-->
+               
             </div>
-            <!--End of container-->
+           
         </div>
-        <!--End of colum-->
-    </section>
+        
+    </section> -->
     <!--end of portfolio-->
     <!--Start of counter-->
-    <section id="counter">
+    <!-- <section id="counter">
         <div class="counter_img_overlay">
             <div class="container">
                 <div class="row">
@@ -210,9 +291,9 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
                     </div>
-                    <!--End of col-md-12-->
+                    
                 </div>
-                <!--End of row-->
+             
                 <div class="row">
                     <div class="col-md-3">
                         <div class="counter_item text-center">
@@ -259,13 +340,14 @@
                         </div>
                     </div>
                 </div>
-                <!--End of row-->
+             
             </div>
-            <!--End of container-->
+           
         </div>
-    </section>
+    </section> -->
     <!--end of counter-->
     <!--start of event-->
+    <hr class="border">
     <section id="event">
         <div class="container">
             <div class="row">
@@ -371,7 +453,8 @@
     </section>
     <!--end of event-->
     <!--Start of testimonial-->
-    <section id="testimonial">
+
+   <!--  <section id="testimonial">
         <div class="testimonial_overlay">
             <div class="container">
                 <div class="row">
@@ -382,18 +465,18 @@
                         </div>
                     </div>
                 </div>
-                <!--End of row-->
+               
                 <section id="carousel">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 text-center">
                                 <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
-                                    <!-- Carousel indicators -->
+                                    
                                     <ol class="carousel-indicators">
                                         <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
                                         <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
                                     </ol>
-                                    <!-- Carousel items -->
+                                
                                     <div class="carousel-inner">
                                         <div class="active item">
                                             <div class="row">
@@ -425,7 +508,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--End of item with active-->
+                                      
                                         <div class="item">
                                             <div class="row">
                                                 <div class="col-md-6">
@@ -456,23 +539,23 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--ENd of item-->
+                                  
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!--End of row-->
+                  
                     </div>
-                    <!--End of container-->
+                   
                 </section>
-                <!--End of carousel-->
+                
             </div>
         </div>
-        <!--End of container-->
-    </section>
+     
+    </section> -->
     <!--end of testimonial-->
     <!--Start of blog-->
-    <section id="blog">
+    <!-- <section id="blog">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -484,7 +567,7 @@
                     </div>
                 </div>
             </div>
-            <!--End of row-->
+     
             <div class="row">
                 <?php
                     $sql3 = $this->db->query("SELECT * FROM tblarticle as a 
@@ -512,18 +595,18 @@
                     }
                 ?>
             </div>
-            <!--End of row-->
+         
         </div>
-        <!--End of container-->
+    
        
             <div class="col-md-offset-9 col-md-3"> 
                 <a href="site/allitem"><button type="button" class="btn btn-default">Read More</button> </a>
             </div>
     
-    </section>
+    </section> -->
     <!-- end of blog-->
     <!--Start of Purches-->
-    <section id="purches">
+  <!--   <section id="purches">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -533,10 +616,10 @@
                     <a href="" class="purches_btn">purches</a>
                 </div>
             </div>
-            <!--End of row-->
+          
         </div>
-        <!--End of container-->
-    </section>
+       
+    </section> -->
     <!--End of purches-->
     <!--Start of Market-->
     <section id="market">

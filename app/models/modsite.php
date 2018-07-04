@@ -317,5 +317,17 @@ class modsite extends CI_Model {
                         WHERE a.location_id = 15 AND a.is_active = 1 ")->result();
     return $query;
   }
+  function loadblog2(){
+    $query = $this->db->query("SELECT * FROM tblarticle as a 
+                        inner join tblgallery as g on a.article_id = g.article_id
+                        WHERE a.location_id = 25 AND a.is_active = 1 ")->result();
 
+    return $query;
+  }
+  function serviceblog(){
+    $query = $this->db->query("SELECT * FROM tblarticle as a 
+                        inner join tblgallery as g on a.article_id = g.article_id
+                        WHERE a.location_id = 26 AND a.is_active = 1 ")->result();
+    return $query;
+  }
 }

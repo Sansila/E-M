@@ -1,0 +1,276 @@
+#service-titles{
+	margin: 0;
+
+} 
+#service{
+	margin:0;
+	padding:50px 0;
+}
+
+.servicetitle{
+	padding-bottom: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Roboto Slab', serif;
+    color: #222222;
+}
+.display-content .specialtytitle{
+	padding-bottom: 5px;
+	padding-top: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Roboto Slab', serif;
+    color: #222222;
+}
+.link-page-block{
+	padding-top: 20px;
+	padding-bottom: 10px;
+	display: inline-block;
+}
+.link-page-box{
+	flex-basis: calc(100% - 120px);
+	text-decoration: none;
+	display: inline;
+}
+.link-page-box a img{
+	height: 100px;
+	width: 100px;
+}
+.link-page-box p{
+	font-size: 10px;
+}
+
+.box-title{
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: 500;
+	padding-bottom: 15px;
+}
+
+.right-grid{
+	padding-right: 0;
+    float: right;
+    width: 25%;
+}
+.right-grid h4{
+	text-transform: uppercase;
+    font-size: 1.4em;
+    /*color: #212121;   */
+    font-weight: 600;
+}
+.left-grid{
+	padding:0;
+}
+.style-ul{
+
+    list-style-type: disc;
+   	text-align: left;
+    margin-left: 50px;
+    padding-bottom: 0.5em;
+
+}
+.display-fix{
+	padding: 50px 0;
+}
+.recent-blog{
+	margin-bottom: : 4em;
+	margin-top: 1em;
+}
+.blog-menu{
+	font-family: Roboto;
+    font-weight: 500;
+}
+.contectus-content{
+	padding-left: 20px;
+}
+.contectus-content p{
+	padding-top: 10px;
+}
+
+#service-menu {
+	font-family: Roboto;
+	display: inline-block;
+	padding: 15px 0;
+
+}
+#service-menu .menu-list{
+	float: left;
+
+}
+#service-menu .menu .menu-list > li{
+	background: #eeeeee;
+    color: #999999;
+}
+.menu-li{
+	 float: left;
+     padding-top: 15px; 
+     padding-left: 30px; 
+}
+
+#mechanical{
+ 	padding: 80px 0px;
+}
+.mechanical-title {
+	font-family: Roboto;
+}
+.electrical-title{
+	padding-top: 25px;
+} 
+.image-article img{
+	style="width: 300px; 
+	height: 200px;
+	padding-bottom: 30px;
+	float: left;
+}
+.plumbing-image-article{
+	height: 250px;
+	width: 100%;
+}
+.space-top-20{
+	margin: 0 0 10.5px;
+}
+.display-content{
+	font-family: Roboto;
+}
+.display-content p{
+	margin: 0 0 10.5px;
+	padding-top: 10px;
+}
+.display-p p{
+	font-family: Roboto;
+	padding-left: 20px;
+}
+.display-p h4{
+	padding-left: 20px;
+	font-weight: 500;
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+.style{
+	padding-top: 70px;
+	color: white;
+	font-weight: 600;
+}
+.menu-list{
+	padding-right: 30px;
+	floats: left;
+	    display: block;
+    background: #eeeeee;
+    color: #999999;
+}
+.collaboration-content p{
+	padding-top: 20px;
+}
+.style-title{
+	position: relative;
+	font-weight: 600;
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.style-title::after{
+	position: absolute;
+    content: "";
+    background-color: blue;
+    height: 3px;
+    width: 30px;
+    bottom: -1px;
+    left: 0;
+}
+.paragraph{
+	padding:0;
+}
+.articletitle{
+	padding: 20px 0;
+	font-size: 25px;
+	font-weight: 600;
+	font-family: 'Roboto Slab', serif;
+	color: #222;
+}
+.main-title{
+	background-color: #8B9057 ;
+    text-align: left;
+    background-size: cover;
+    height: 200px;
+
+}
+.main-title h2{
+	padding-top: 80px;
+	color: white;
+	text-transform: uppercase;
+}
+
+
+ .border{
+    border-bottom: 2px solid #906157;
+}
+ .undertitle-line{
+ 	border-bottom: 2px solid black; 
+ }
+ #ourcontent {
+ 	padding: 80px 0px;
+    
+}
+#ourcontent .widget-title {
+    font-size: 30px;
+    margin-top: 0;
+}
+#ourcontent .textwidget {
+    font-family: Roboto;
+    padding-top: 25px;
+    padding-bottom: 1em;
+}
+#ourcontent .text-right-blog{
+
+    font-family: Roboto;
+    padding-top: 25px;
+    padding-bottom: 1em;
+
+}
+.text-right-blog p{
+	padding-top: 20px;
+	padding-left: 20px;
+}
+.widget-title{
+
+	padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Roboto Slab', serif;
+    color: #222222;
+    
+}	
+.textwidget h5 {
+	padding-bottom: 1em;
+	padding-top: 1em;
+	font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: .1px;
+}
+.textwidget h3 img{
+	width: 100%;
+	height: 280px;
+}
+.textwidget p{
+	font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+
+}
+.textwidget p img{
+	width: 100%;
+	height: 280px;
+}
+.textwidget p i{
+	padding-top: 25px;
+}
+
+body .textwidget {
+	color: #606060;
+}
+
+
+#master-container{
+	margin-bottom: 0 !important;
+}

@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="<?=base_url().'assets/green/css/isotope/style.css'?>">
         <!--Main Stylesheet-->
         <link href="<?=base_url().'assets/green/css/style.css'?>" rel="stylesheet">
+        <link href="<?=base_url().'assets/green/css/green.css'?>" rel="stylesheet">
         <!--Responsive Framework-->
         <link href="<?=base_url().'assets/green/css/responsive.css'?>" rel="stylesheet">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -49,6 +50,7 @@
     .dropdown-ul {
         text-decoration-color: black;
     }
+   
     </style>
 <!-- <body data-spy="scroll" data-target="#header"> -->
     <body>

@@ -1,18 +1,12 @@
-<section id="blog">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="latest_blog text-center" style="background-color: green">
-                    <div>
-                        <?php
-                        $sql = $this->db->query("SELECT * FROM tbllocation WHERE location_id = 9 AND is_active = 1")->row();?>
-                        <h2><?php echo $sql->location_name; 
-                        ?></h2>
-                    </div>
-                </div>
-            </div><br>
+<section id="service-title">
+    <?php $sql = $this->db->query("SELECT * FROM tbllocation WHERE location_id = 9 AND is_active = 1")->row();?>
+    <div class="main-title">
+        <div class="container">
+            <h2><?php echo $sql->location_name;?></h2>
         </div>
-        <!--End of row-->
+    </div>
+      <br>
+       <div class="container">
         <div class="row">
             
             <?php

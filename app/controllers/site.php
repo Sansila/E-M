@@ -103,12 +103,50 @@ class Site extends CI_Controller {
       		$datas['rowgetoutproduct'] = $this->sites->getoutproduct();
       		$datas['rowgetproductdescription'] = $this->sites->getproductdescription();
       		$datas['loadbanner'] = $this->sites->loadbanner();
+      		$datas['loadblog2'] = $this->sites->loadblog2();
 		}
 		$this->load->view('site/green/index',$datas);
 		//$this->load->view('site/home',$datas); //used before
 		$this->load->view('site/green/footer'); 
 		//$this->load->view('site/footer'); //used before
 	}
+	function service(){
+		$data['serviceblog'] = $this->sites->serviceblog();
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/service/service',$data);
+		$this->load->view('site/green/footer');
+	}
+	function mechanical(){
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/service/mechanicalservice');
+		$this->load->view('site/green/footer');
+	}
+	function electrical(){
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/service/electricalservice');
+		$this->load->view('site/green/footer');
+	}
+	function plumbing(){
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/service/plumbingservice');
+		$this->load->view('site/green/footer');
+	}
+	function building(){
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/service/building');
+		$this->load->view('site/green/footer');
+	}
+	function specialty(){
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/service/specialty');
+		$this->load->view('site/green/footer');
+	}
+	function buildinginformation(){
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/service/buildinginformation');
+		$this->load->view('site/green/footer');
+	}
+
 	function allitem($id=''){
 		$data['loaditem'] = $this->sites->loaditem();
 		$this->load->view('site/green/header');
