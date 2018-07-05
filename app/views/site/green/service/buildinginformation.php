@@ -3,61 +3,74 @@
 				<h1 class="main-title__primary style">Building Information Modeling</h1>
 	</div>
 </div>
+
+<?php $sql = "SELECT * FROM site_profile";
+    $siteprofile=$this->db->query($sql)->row();
+    ?>
+    
 <section id="mechanical">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9">
-				<div class="mechanical-title">
-					<h1 class="style-title">Increase Knowledge Through Technology</h1>
-				</div>
-				<div class="row">
-					<div class="col-md-12" style=" padding: 40px 0;">
-						<div class="col-md-5">
-							
-								<div class="plumbing-image-article">
-									<img src="<?=base_url().'assets/images/map.jpg'?>">
-								</div>
-						</div>
-						<div class="col-md-7">
-							
-							<div class="display-content">
-								<p>We live in a technology-driven world. In recent years, the building design industry has benefitted greatly from advances in the area of computer-assisted design. We use Building Information Modeling (BIM) to design 3D models where the design elements within the model communicate with each other. Just like in some amazing science fiction film, every detail of the building construction can be viewed by all team members from one location.</p>
-								<h4 class="specialtytitle" > Make more informed decisions</h4>
-								<p>Our Building and Tenant Services group has Tenant Improvement down to a science. We are a small, nimble team that can respond to your needs quickly, yet we have our entire MEP office to draw upon when required. We have completed over 2,000 tenant improvement projects ranging in size from 100 square feet to over 150,000 square feet.</p>
-							</div>
-						</div>
-					</div>
-		
-				</div>
-				<div class="mechanical-title">
-					<h1 class="style-title">Experience The Exciting Results of BIM</h1>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="display-fix">
-							<div class="col-md-5 left-grid"> 
-								<div class="image-article">
-									<img src="<?=base_url().'assets/images/St-Marys_379t.jpg'?>">
-								</div>
-								<div class="image-article">
-									<img src="<?=base_url().'assets/images/BE-1900-Simulator-1.jpg'?>">
-								</div>
-							</div>
-							<div class="col-md-7">
-								<div class="display-p">
-									<p>As your design partner, we use a platform called Revit MEP to create a 3D modeling environment. In this environment, our team can visualize complex systems and avoid conflicts with other building systems. Using Revit, we can simplify design decision-making and produce coordinated and accurate design documentation. This helps us increase design performance, produce higher quality work and increase cost efficiency. Compatibility issues also become a thing of the past as we import from and export to a variety of CAD formats with ease to share with you during the design review process.</p>
-									
-									<h4 class="specialtytitle" > We use Revit BIM on over 70% of our projects.</h4>
-									<p>The projects include K-12 educational facilities, multifamily developments and offices buildings. For example, we are currently using REVIT on PIVOT Denver: a new three-tower multifamily development with a flagship Whole Foods on the main floor. Using Revit and other BIM modeling programs, we designed the project to include a high level of coordination at “pinch points.” Our engineers – from a variety of disciplines – offered field-worthy solutions for these tight spots, so that we could envision solutions prior to construction beginning in the field.</p>
 
-									<p>Many of our engineers also create designs of building systems using AutoCAD and Autotdesk Navisworks. As your design partner, we’ll use whatever tools you use to ensure the efficient project coordination.</p>
-									
+				<?php 
+				$i = 1;
+				foreach($loadbuildinginformation as $value){
+					?>
+						<div class="mechanical-title">
+							<h1 class="style-title"><?php echo $value->article_title; ?></h1>
+						</div>
+						<?php
+							if($i == 1) {
+								$img = $this->db->query("SELECT * FROM tblgallery where article_id = '$value->article_id' ")->result(); ?>
+								<div class="row">
+									<div class="col-md-12" style=" padding: 40px 0;">
+										<div class="col-md-5">	
+											<?php foreach($img as $img){?>
+											<div class="image-article">
+												<img src="<?=base_url().'assets/upload/article/'.$value->article_id.'_'.$img->url;?>">
+											</div>
+										<?php }?>
+										</div>
+										<div class="col-md-7">
+											<div class="display-content">
+												<?php echo $value->content; ?>
+											</div>
+										</div>
+									</div>
+						
+								</div>
+
+						<?php	} else { 
+							$img = $this->db->query("SELECT * FROM tblgallery where article_id = '$value->article_id' ")->result();
+						?>
+							
+							<div class="row">
+							<div class="col-md-12">
+								<div class="display-fix">
+									<div class="col-md-5 left-grid"> 
+										<?php foreach($img as $img) {?>
+											<div class="image-article">
+												<img src="<?=base_url().'assets/upload/article/'.$value->article_id.'_'.$img->url;?>">
+											</div>
+										<?php }?>
+									</div>
+									<div class="col-md-7">
+										<div class="display-p">
+											<?php echo $value->content; ?>
+											
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				
+
+
+						<?php }
+						$i++;
+					}
+					?>
+					
 			</div>
 			<div class="col-md-3">
 				<div class="row">
@@ -77,10 +90,10 @@
 						<h4 class="style-title">Contact Us</h4>
 							<div class="contectus-content">
 								<p>
-									<a href="tel:911" title="call"><i class="fa fa-phone"></i> 911</a><br>
-									<a href="google.com"><i class="fa fa-envelope"></i> info@google.com</a>
+									<a href="tel:911" title="call"><i class="fa fa-phone"></i><?=$siteprofile->phone?></a><br>
+									<a href="google.com"><i class="fa fa-envelope"></i> <?=$siteprofile->email?></a>
 								</p>
-								<p><i class="fa fa-home"></i> 6402 S. Troy Circle, Suite 100<br>Centennial, Colorado 80111</p>
+								<p><i class="fa fa-home"></i><?=$siteprofile->address?></p>
 								<p><a href="/contact-us/" title="Request a Proposal Online">Request a Proposal Online</a></p>
 							</div>
 						</div>

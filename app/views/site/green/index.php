@@ -53,48 +53,8 @@
         </div>
     </section>
     <!--end of slider section-->
-    <!--Start of welcome section-->
-    <section id="welcome">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="wel_header">
-                        <?php 
-                            $sql = $this->db->query("SELECT * FROM tbllocation WHERE location_id = 18 AND is_active = 1")->row();
-                            echo $sql->location_name;
-                        ?>
-                    </div>
-                </div>
-            </div>
-            <!--End of row-->
-            <div class="row">
-                <?php
-                    $sql = $this->db->query("SELECT * FROM tblarticle WHERE location_id = 18 AND is_active = 1 ")->result();
-                    foreach ($sql as $item) {
-                ?>
-
-                <div class="col-md-3">
-                    <div class="item">
-                        <div class="single_item">
-                            <div class="item_list">
-                                <?php 
-                                    echo $item->article_title;
-                                    echo $item->content;
-                                ?>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php 
-                    }
-                ?>
-            </div>
-            <!--End of row-->
-        </div>
-        <!--End of container-->
-    </section>
-<hr class="border">
+   
+<!-- <hr class="border"> -->
     <section id="ourcontent">
         <div class="container">
             <div class="row">
@@ -621,42 +581,5 @@
        
     </section> -->
     <!--End of purches-->
-    <!--Start of Market-->
-    <section id="market">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="market_area text-center">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="market_logo">
-                                    <a href=""><img src="<?=base_url().'assets/green/'?>img/audiojungle.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="market_logo">
-                                    <a href=""><img src="<?=base_url().'assets/green/'?>img/codecanyon.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="market_logo">
-                                    <a href=""><img src="<?=base_url().'assets/green/'?>img/graphicriver.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="market_logo">
-                                    <a href=""><img src="<?=base_url().'assets/green/'?>img/audiojungle.png" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End of row-->
-                    </div>
-                    <!--End of market Area-->
-                </div>
-                <!--End of col-md-12-->
-            </div>
-            <!--End of row-->
-        </div>
-        <!--End of container-->
-    </section>
+    
 

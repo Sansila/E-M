@@ -330,4 +330,42 @@ class modsite extends CI_Model {
                         WHERE a.location_id = 26 AND a.is_active = 1 ")->result();
     return $query;
   }
+  function loadmechanical(){
+     $query = $this->db->query("SELECT * FROM tblarticle as a WHERE a.location_id = 27 AND a.is_active = 1 ")->result();
+     return $query;
+  }
+  // function withoutimage(){
+  //   $query = $this->db->query("SELECT * FROM tblarticle where location_id = 27 ")->result();
+  //    return $query;
+  // }
+  function loadelectrical(){
+    $query = $this->db->query("SELECT * FROM tblarticle as a 
+                        left join tblgallery as g on a.article_id = g.article_id
+                        WHERE a.location_id = 28 AND a.is_active = 1 ")->result();
+    return $query;
+  }
+  function loadplumbing(){
+    $query = $this->db->query("SELECT * FROM tblarticle as a 
+                        left join tblgallery as g on a.article_id = g.article_id
+                        WHERE a.location_id = 29 AND a.is_active = 1 ")->result();
+    return $query;
+  }
+  function loadbuilding(){
+    $query = $this->db->query("SELECT * FROM tblarticle as a 
+                        left join tblgallery as g on a.article_id = g.article_id
+                        WHERE a.location_id = 30 AND a.is_active = 1 ")->result();
+    return $query;
+  }
+  function loadspecialty(){
+      $query = $this->db->query("SELECT * FROM tblarticle as a 
+                        left join tblgallery as g on a.article_id = g.article_id
+                        WHERE a.location_id = 31 AND a.is_active = 1 ")->result();
+    
+    return $query;
+  }
+  function loadbuildinginformation(){
+    $query = $this->db->query("SELECT * FROM tblarticle as a WHERE a.location_id = 32 AND a.is_active = 1 ")->result();
+    
+    return $query;
+  }
 }

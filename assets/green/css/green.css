@@ -91,16 +91,13 @@
 	font-family: Roboto;
 	display: inline-block;
 	padding: 15px 0;
+}
 
 }
 #service-menu .menu-list{
 	float: left;
+}
 
-}
-#service-menu .menu .menu-list > li{
-	background: #eeeeee;
-    color: #999999;
-}
 .menu-li{
 	 float: left;
      padding-top: 15px; 
@@ -152,9 +149,12 @@
 	font-weight: 600;
 }
 .menu-list{
+	text-align: left;
+	border: 1px solid blue;
+	width: 100%;
 	padding-right: 30px;
 	floats: left;
-	    display: block;
+	display: block;
     background: #eeeeee;
     color: #999999;
 }

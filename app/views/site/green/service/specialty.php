@@ -3,31 +3,34 @@
 				<h1 class="main-title__primary style">Specialty Services</h1>
 	</div>
 </div>
+
+<?php $sql = "SELECT * FROM site_profile";
+    $siteprofile=$this->db->query($sql)->row();
+    ?>
+    
 <section id="mechanical">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9">
-				<div class="mechanical-title">
-					<h1 class="style-title">Services to Meet Your Needs</h1>
-				</div>
-				<div class="row">
-					<div class="col-md-12" style=" padding: 40px 0;">
-						<div class="col-md-5">
-							
+				<?php foreach ($loadspecialty as $key) { ?>
+					<div class="mechanical-title">
+						<h1 class="style-title"><?php echo $key->article_title; ?></h1>
+					</div>
+					<div class="row">
+						<div class="col-md-12" style=" padding: 40px 0;">
+							<div class="col-md-5">
 								<div class="plumbing-image-article">
-									<img src="<?=base_url().'assets/images/service.jpg'?>">
+									<img src="<?=base_url().'assets/upload/article/'.$key->article_id.'_'.$key->url;?>">
 								</div>
-						</div>
-						<div class="col-md-7">
-							
-							<div class="display-content">
-								<p>Our dedicated Building and Tenant Services team is here for you and your building. We know you need a dependable partner who will deliver on time, every time, at the drop of the hat. We understand your primary objective—to keep every building tenant happy!</p>
-								<p>Our Building and Tenant Services group has Tenant Improvement down to a science. We are a small, nimble team that can respond to your needs quickly, yet we have our entire MEP office to draw upon when required. We have completed over 2,000 tenant improvement projects ranging in size from 100 square feet to over 150,000 square feet.</p>
+							</div>
+							<div class="col-md-7">
+								<div class="display-content">
+									<?php echo $key->content;?>
+								</div>
 							</div>
 						</div>
 					</div>
-		
-				</div>
+				<?php } ?>
 				
 			</div>
 			<div class="col-md-3">
@@ -48,10 +51,10 @@
 						<h4 class="style-title">Contact Us</h4>
 							<div class="contectus-content">
 								<p>
-									<a href="tel:911" title="call"><i class="fa fa-phone"></i> 911</a><br>
-									<a href="google.com"><i class="fa fa-envelope"></i> info@google.com</a>
+									<a href="tel:911" title="call"><i class="fa fa-phone"></i><?=$siteprofile->phone?></a><br>
+									<a href="google.com"><i class="fa fa-envelope"></i> <?=$siteprofile->email?></a>
 								</p>
-								<p><i class="fa fa-home"></i> 6402 S. Troy Circle, Suite 100<br>Centennial, Colorado 80111</p>
+								<p><i class="fa fa-home"></i><?=$siteprofile->address?></p>
 								<p><a href="/contact-us/" title="Request a Proposal Online">Request a Proposal Online</a></p>
 							</div>
 						</div>

@@ -368,7 +368,7 @@
             processData: false,
             success:function(data){
                 toasmsg('success',msg);
-                location.reload();
+                //location.reload();
                 console.log("success");
                 console.log(data);
             },

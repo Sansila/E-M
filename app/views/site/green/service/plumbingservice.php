@@ -3,11 +3,49 @@
 				<h1 class="main-title__primary style">Plumbing Services</h1>
 	</div>
 </div>
+
+<?php $sql = "SELECT * FROM site_profile";
+    $siteprofile=$this->db->query($sql)->row();
+    ?>
+    
 <section id="mechanical">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9">
-				<div class="mechanical-title">
+				<?php 
+				foreach ($loadplumbing as $key) {
+					if($key->article_id  == 130) { ?>
+						<div class="mechanical-title">
+							<h1 class="style-title"><?php echo $key->article_title; ?></h1>
+						</div>
+
+						<div class="row" style="padding: 25px 0;">
+							<div class="col-md-4">
+								<div class="plumbing-image-article">
+									<img src="<?=base_url().'assets/upload/article/'.$key->article_id.'_'.$key->url;?>">
+								</div>
+							</div>
+							<div class="col-md-8">
+								<div class="display-content">
+									<?php echo $key->content; ?>
+								</div>
+							</div>
+						</div>
+					<?php } 
+					else{ ?>		
+					
+						
+						<div class="electrical-title">
+							<h1 class="style-title"><?php echo $key->article_title; ?></h1>
+						</div>
+						<div class="display-content">
+							<?php echo $key->content; ?>
+						</div>
+					
+					<?php }
+				} ?>
+				</div>
+				<!-- <div class="mechanical-title">
 					<h1 class="style-title">Prevent issues by looking at the “big picture”</h1>
 				</div>
 				<div class="row">
@@ -33,7 +71,7 @@
 				<div class="display-content">
 					<p>Accomplishing great plumbing design means assembling a team that works on various aspects of your project while keeping multiple objectives in mind. Our engineering team members are highly-experienced and certified or licensed either as P.E., E.I., LEED AP or a combination of the three. They stay informed and on top of the latest developments in the field through active participation in a variety of organizations.</p>
 				</div>
-			</div>
+			</div> -->
 			<div class="col-md-3">
 				<div class="row">
 					<div class="col-md-12">
@@ -52,10 +90,10 @@
 						<h4 class="style-title">Contact Us</h4>
 							<div class="contectus-content">
 								<p>
-									<a href="tel:911" title="call"><i class="fa fa-phone"></i> 911</a><br>
-									<a href="google.com"><i class="fa fa-envelope"></i> info@google.com</a>
+									<a href="tel:911" title="call"><i class="fa fa-phone"></i><?=$siteprofile->phone?></a><br>
+									<a href="google.com"><i class="fa fa-envelope"></i> <?=$siteprofile->email?></a>
 								</p>
-								<p><i class="fa fa-home"></i> 6402 S. Troy Circle, Suite 100<br>Centennial, Colorado 80111</p>
+								<p><i class="fa fa-home"></i><?=$siteprofile->address?></p>
 								<p><a href="/contact-us/" title="Request a Proposal Online">Request a Proposal Online</a></p>
 							</div>
 						</div>

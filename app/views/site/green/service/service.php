@@ -5,6 +5,11 @@
 	</div>
 </div>
 
+<?php $sql = "SELECT * FROM site_profile";
+    $siteprofile=$this->db->query($sql)->row();
+    ?>
+
+    
 <section id="service">
 	<div class="container">
 		<div class="col-md-9">
@@ -151,11 +156,11 @@
 						<h4 class="style-title">Contact Us</h4>
 						<div class="text-right-blog">
 							<p>
-								<a href="tel:911" title="call"><i class="fa fa-phone"></i> 911</a><br>
-								<a href="google.com"><i class="fa fa-envelope"></i> info@google.com</a>
-							</p>
-							<p><i class="fa fa-home"></i> 6402 S. Troy Circle, Suite 100<br>Centennial, Colorado 80111</p>
-							<p><a href="/contact-us/" title="Request a Proposal Online">Request a Proposal Online</a></p>
+									<a href="tel:911" title="call"><i class="fa fa-phone"></i><?=$siteprofile->phone?></a><br>
+									<a href="google.com"><i class="fa fa-envelope"></i> <?=$siteprofile->email?></a>
+								</p>
+								<p><i class="fa fa-home"></i><?=$siteprofile->address?></p>
+								<p><a href="/contact-us/" title="Request a Proposal Online">Request a Proposal Online</a></p>
 						</div>
 					</div>
 				</div>

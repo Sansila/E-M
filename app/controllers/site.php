@@ -117,33 +117,40 @@ class Site extends CI_Controller {
 		$this->load->view('site/green/footer');
 	}
 	function mechanical(){
+		// $data['withoutimage'] = $this->sites->withoutimage();
+		$data['loadmechanical'] = $this->sites->loadmechanical();
 		$this->load->view('site/green/header');
-		$this->load->view('site/green/service/mechanicalservice');
+		$this->load->view('site/green/service/mechanicalservice',$data);
 		$this->load->view('site/green/footer');
 	}
-	function electrical(){
+	function electrical(){ 
 		$this->load->view('site/green/header');
-		$this->load->view('site/green/service/electricalservice');
+		$data['loadelectrical'] = $this->sites->loadelectrical();
+		$this->load->view('site/green/service/electricalservice',$data);
 		$this->load->view('site/green/footer');
 	}
 	function plumbing(){
 		$this->load->view('site/green/header');
-		$this->load->view('site/green/service/plumbingservice');
+		$data['loadplumbing'] = $this->sites->loadplumbing();
+		$this->load->view('site/green/service/plumbingservice',$data);
 		$this->load->view('site/green/footer');
 	}
 	function building(){
 		$this->load->view('site/green/header');
-		$this->load->view('site/green/service/building');
+		$data['loadbuilding'] = $this->sites->loadbuilding();
+		$this->load->view('site/green/service/building', $data);
 		$this->load->view('site/green/footer');
 	}
 	function specialty(){
 		$this->load->view('site/green/header');
-		$this->load->view('site/green/service/specialty');
+		$data['loadspecialty'] =$this->sites->loadspecialty();
+		$this->load->view('site/green/service/specialty',$data);
 		$this->load->view('site/green/footer');
 	}
 	function buildinginformation(){
 		$this->load->view('site/green/header');
-		$this->load->view('site/green/service/buildinginformation');
+		$data['loadbuildinginformation'] =$this->sites->loadbuildinginformation();
+		$this->load->view('site/green/service/buildinginformation',$data);
 		$this->load->view('site/green/footer');
 	}
 

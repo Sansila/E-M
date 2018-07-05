@@ -3,50 +3,64 @@
 				<h1 class="main-title__primary style">Mechanical Services</h1>
 	</div>
 </div>
+
+<?php $sql = "SELECT * FROM site_profile";
+    $siteprofile=$this->db->query($sql)->row();
+    ?>
+    
 <section id="mechanical">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9">
-				<div class="mechanical-title">
-					<h1 class="style-title">Stay on Cutting Edge</h1>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
+
+
+				<?php 
+					$i = 1;
+					foreach ($loadmechanical as $val) { // it loop throw to the article title 
+				?>
+					<div class="mechanical-title">
+						<h1 class="style-title"><?php echo $val->article_title;?></h1>
+					</div>
+				<?php
+				//define condition of article id to get images from that id
+						if($i == 1)
+						{
+						   $img = $this->db->query("SELECT * FROM tblgallery where article_id = '$val->article_id' ")->result();
+				?>
 						<div class="display-fix">
-							<div class="col-md-5 left-grid"> 
-								<div class="image-article">
-									<img src="<?=base_url().'assets/images/ab1432.jpg'?>">
+							<div class="row">
+								<div class="col-md-5 left-grid"> 
+									<?php 
+										foreach ($img as $img) {
+									?>
+									<div class="image-article">
+										<img src="<?=base_url().'assets/upload/article/'.$val->article_id.'_'.$img->url;?>">
+									</div>
+									<?php 
+										}
+									?>
 								</div>
-								<div class="image-article">
-									<img src="<?=base_url().'assets/images/ab1432.jpg'?>">
-								</div>
-							</div>
-							<div class="col-md-7">
-								<div class="display-content">
-									<p>Whether you need to install cooling for a new server room or figure out how to replace your inefficient central mechanical plant, you want to partner with mechanical engineers you trust. We are here for you and our team members are experts in:</p>
-									<ul>
-										<li class="style-ul">Heating: adding thermal energy</li>
-										<li class="style-ul">Cooling: removing thermal energy</li>
-										<li class="style-ul">Humidifying: adding moisture</li>
-										<li class="style-ul">Dehumidifying: removing moisture</li>
-										<li class="style-ul">Cleaning: removing particulates and contaminants</li>
-										<li class="style-ul">Ventilation: diluting gaseous contaminants</li>
-										<li class="style-ul">Air movement: circulating and mixing air for proper ventilation and thermal energy transfer</li>
-									</ul>
-									<p>They are certified or licensed either as P.E., E.I., LEED AP or a combination of the three. They stay informed and on top of the latest developments in the field through active participation in a variety of organizations. These professional organizations include: The American Society of Mechanical Engineers (ASME), the American Society of Plumbing Engineers (ASPE) and the American Society of Heating, Refrigeration and Air-Conditioning Engineers (ASHRAE) to name just a few.</p>
-									
+								<div class="col-md-7">
+									<div class="display-content">
+										<?php echo $val->content;?>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="mechanical-title">
-					<h1 class="style-title">Collaboration for Setter Solution</h1>
-				</div>
-				<div class="collaboration-content">
-					<p>Our engineers design for diverse projects and clients. Each of our engineers is given the opportunity to lead projects and be a core team member. Working on many types of tasks in a variety of capacities helps each team member to build a deep knowledge base. They learn how to design flexible solutions that work for the present and the future. So, they can help you strike just the right balance between performance and cost. Our teams can provide you with assessments, recommend alternatives and work with you to design high-functioning systems to fit your specific needs.</p>
-				</div>
-				
+				<?php
+						}else{
+				?>
+						<div class="collaboration-content">
+							<?php echo $val->content;?>
+						</div>
+				<?php
+						}
+						$i++;
+					}
+				?>
+					
+					
+					
 			</div>
 			<div class="col-md-3">
 				<div class="row">
@@ -67,10 +81,10 @@
 						<h4 class="style-title">Contact Us</h4>
 							<div class="contectus-content">
 								<p>
-									<a href="tel:911" title="call"><i class="fa fa-phone"></i> 911</a><br>
-									<a href="google.com"><i class="fa fa-envelope"></i> info@google.com</a>
+									<a href="tel:911" title="call"><i class="fa fa-phone"></i><?=$siteprofile->phone?></a><br>
+									<a href="google.com"><i class="fa fa-envelope"></i> <?=$siteprofile->email?></a>
 								</p>
-								<p><i class="fa fa-home"></i> 6402 S. Troy Circle, Suite 100<br>Centennial, Colorado 80111</p>
+								<p><i class="fa fa-home"></i><?=$siteprofile->address?></p>
 								<p><a href="/contact-us/" title="Request a Proposal Online">Request a Proposal Online</a></p>
 							</div>
 						</div>
