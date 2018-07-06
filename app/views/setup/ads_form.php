@@ -180,7 +180,7 @@
             processData: false,
             success:function(data){
                 // location.reload();
-                location.href="<?php echo site_url('setup/setupads/index/?m='.$m.'&p='.$p) ?>";
+                //location.href="<?php echo site_url('setup/setupads/index/?m='.$m.'&p='.$p) ?>";
 
                 console.log("success");
                 console.log(data);

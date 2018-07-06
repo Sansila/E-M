@@ -37,7 +37,7 @@
                     <div class="item <?php echo $active;?>">
                         <div class="slider_overlay">
                             <img src="<?=base_url().'assets/upload/banner/'.$slide->banner_id.'.png'?>" alt="...">
-                            <div class="carousel-caption">
+                            <div class="carousel-caption" style="left: 8%; top: 18%;">
                                 <div class="slider_text">
                                     <?php echo $slide->title?>
                                 </div>
@@ -55,12 +55,14 @@
     <!--end of slider section-->
    
 <!-- <hr class="border"> -->
-    <section id="ourcontent">
+    <section id="ourcontent" style="padding: 0px;">
         <div class="container">
             <div class="row">
-                <?php foreach ($loadblog2 as $key) {
+                <?php 
+                    $e = 1;
+                    foreach ($loadblog2 as $key) {
 
-                    if($key->article_id % 2==0){ 
+                    if($e == 1){ 
                 ?>
 
                         <div class="col-md-6">
@@ -70,10 +72,11 @@
                             <div class="undertitle-line"></div>
                             <div class="textwidget">
                                 <?php echo $key->content;?>
+                                <br>
                                 <h3><img src="<?=base_url().'assets/upload/article/'.$key->article_id.'_'.$key->url;?>"></h3>
                             </div>
                         </div>
-                <?php }  else {?>
+                <?php }  elseif($e==2){?>
                         <div class="col-md-6">
                             <h3 class="widget-title">
                                 <?php echo $key->article_title;?>
@@ -90,6 +93,8 @@
              <?php  
                 
                  }
+                 
+                 $e++;
              }
             ?>
              </div>
@@ -308,11 +313,11 @@
     <!--end of counter-->
     <!--start of event-->
     <hr class="border">
-    <section id="event">
+    <section id="event" style="padding: 0px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="event_header text-center">
+                    <div class="event_header text-center" style="padding-bottom: 0px;">
                         <?php 
                             $sql = $this->db->query("SELECT * FROM tbllocation WHERE location_id = 21 AND is_active = 1")->row();
                             echo $sql->location_name;
@@ -330,10 +335,9 @@
                             WHERE a.location_id = 21 AND a.is_active = 1 ")->result();
                         $i = 1;
                         foreach ($sql2 as $item2) {
-                        if($i == 1)
-                        {
+                        
                     ?>
-                    <div class="row">
+                    <div class="row" style="margin-top: 10px">
                         <div class="col-md-6 zero_mp">
                             <div class="event_item">
                                 <div class="event_img">
@@ -345,35 +349,14 @@
                             <div class="event_item">
                                 <div class="event_text text-center">
                                     <?php 
-                                        echo $item2->article_title;
+                                        echo '<a href="#"><h4>'.$item2->article_title.'</h4></a>';
                                         echo $item2->content;
                                     ?>
-                                </div>
-                            </div>
-                        </div>
-                    <?php 
-                        }else{
-                    ?>
-                        <div class="col-md-6 zero_mp">
-                            <div class="event_item">
-                                <div class="event_text text-center">
-                                    <?php 
-                                        echo $item2->article_title;
-                                        echo $item2->content;
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 zero_mp">
-                            <div class="event_item">
-                                <div class="event_img">
-                                    <img src="<?=base_url().'assets/upload/article/'.$item2->article_id.'_'.$item2->url?>" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <?php
-                        }
                         $i++;
                         }
                     ?>
@@ -395,7 +378,7 @@
                             </div>
                             <div class="event_news_text">
                                 <?php 
-                                    echo $item4->article_title;
+                                    echo ' <a href="#"><h4>'.$item4->article_title.'</h4></a>';
                                     echo $item4->content;
                                 ?>
                             </div>

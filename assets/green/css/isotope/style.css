@@ -4,7 +4,8 @@ ul {
 }
 ul.menu li {
     display: inline-block;
-    padding: 10px 25px;
+    padding: 20px 25px;
+    margin-top: 2px;
     
 }
 ul.menu li button {

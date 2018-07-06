@@ -9,7 +9,7 @@
     $siteprofile=$this->db->query($sql)->row();
     ?>
     <!--Start of contact-->
-    <section id="contact">
+    <section id="contact" style="padding: 0px; min-height: 540px;">
         <div class="container">
             <!--End of row-->
             <div class="row">
@@ -77,14 +77,14 @@
             <div class="row text-center">
                 <div class="col-md-6">
                     <div class="copyright">
-                        <p>@ 2016 - Design By <span><a href="">&#9798;</a></span></p>
+                        <p><?php echo date('Y')?> -  Developed By CAMBODIASOFT <span><a href="">&#9798;</a></span></p>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <!-- <div class="col-md-6">
                     <div class="designer">
-                        <p>A Design By <a href="#">XpeedStudio</a></p>
+                        <p>Design By <a href="#">CAMBODIASOFT</a></p>
                     </div>
-                </div>
+                </div> -->
             </div>
             <!--End of row-->
         </div>
