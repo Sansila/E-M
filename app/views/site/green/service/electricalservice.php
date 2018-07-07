@@ -85,7 +85,7 @@
 							<div class="blog-menu">
 								<ul id="service-menu" class="menu">
 									<li class="menu-list"><a href="<?=base_url('site/mechanical')?>"> Mechanical Services</a></li>
-									<li class="menu-list"><a href="<?=base_url('site/electrical')?>">Electrical Services</a></li>
+									<li class="onmenu"><a href="<?=base_url('site/electrical')?>">Electrical Services</a></li>
 									<li class="menu-list"><a href="<?=base_url('site/plumbing')?>">Plumbing Services</a></li>
 									<li class="menu-list"><a href="<?=base_url('site/building')?>">Building and Tenant Services</a></li>
 									<li class="menu-list"><a href="<?=base_url('site/specialty')?>">Specialty Services</a></li>

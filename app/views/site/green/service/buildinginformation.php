@@ -83,7 +83,7 @@
 									<li class="menu-list"><a href="<?=base_url('site/plumbing')?>">Plumbing Services</a></li>
 									<li class="menu-list"><a href="<?=base_url('site/building')?>">Building and Tenant Services</a></li>
 									<li class="menu-list"><a href="<?=base_url('site/specialty')?>">Specialty Services</a></li>
-									<li class="menu-list"><a href="<?=base_url('site/buildinginformation')?>">Building Information Modeling</a></li>
+									<li class="onmenu"><a href="<?=base_url('site/buildinginformation')?>">Building Information Modeling</a></li>
 								</ul>
 							</div>
 							<div class="clearfix"></div>

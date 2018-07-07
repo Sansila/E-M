@@ -337,7 +337,7 @@
                         foreach ($sql2 as $item2) {
                         
                     ?>
-                    <div class="row" style="margin-top: 10px">
+                    <div class="row" style="margin-bottom: 10px">
                         <div class="col-md-6 zero_mp">
                             <div class="event_item">
                                 <div class="event_img">
@@ -350,8 +350,16 @@
                                 <div class="event_text text-center">
                                     <?php 
                                         echo '<a href="#"><h4>'.$item2->article_title.'</h4></a>';
-                                        echo $item2->content;
+                                        echo $item2->content; ?>
+                                        <?php if($item2->article_id == 100 ){
+                                         ?>
+                                         <p><a class="event_btn" href="<?=base_url('site/mechanical')?> ">READ MORE</a></p>
+                                  <?php } elseif($item2->article_id == 101){  ?>
+                                        <p><a class="event_btn" href="<?=base_url('site/electrical')?>">READ MORE</a></p>
+                                 <?php }
                                     ?>
+
+                                   
                                 </div>
                             </div>
                         </div>
@@ -378,14 +386,14 @@
                             </div>
                             <div class="event_news_text">
                                 <?php 
-                                    echo ' <a href="#"><h4>'.$item4->article_title.'</h4></a>';
+                                    echo '<h4><a href="'.base_url().$item4->meta_keyword.'">'.$item4->article_title.'</a></h4>';
                                     echo $item4->content;
                                 ?>
                             </div>
                         </div>
                     </div>
                     <?php
-                        }
+                    }
                     ?>
                 </div>
                 <!--End of col-md-4-->
