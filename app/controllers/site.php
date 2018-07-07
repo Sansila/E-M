@@ -110,6 +110,8 @@ class Site extends CI_Controller {
 		$this->load->view('site/green/footer'); 
 		//$this->load->view('site/footer'); //used before
 	}
+
+
 	function service(){
 		$data['serviceblog'] = $this->sites->serviceblog();
 		$this->load->view('site/green/header');
@@ -168,6 +170,56 @@ class Site extends CI_Controller {
 		$this->load->view('site/green/detail',$data);
 		$this->load->view('site/green/footer');
 	}
+
+	function projects(){
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/projects');
+		$this->load->view('site/green/footer');
+
+	}
+
+	function church(){
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/church');
+		$this->load->view('site/green/footer');
+	}
+	function education(){
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/education');
+		$this->load->view('site/green/footer');
+	}
+	function goverment(){
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/goverment');
+		$this->load->view('site/green/footer');
+	}
+	function healt_science(){
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/healt_science_technology');
+		$this->load->view('site/green/footer');
+	}
+	function menufacture(){
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/menufacturing');
+		$this->load->view('site/green/footer');
+	}
+	function multifamily(){
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/multifamily');
+		$this->load->view('site/green/footer');
+	}
+	function office(){
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/office');
+		$this->load->view('site/green/footer');
+	}
+	function restaurant(){
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/restaurant');
+		$this->load->view('site/green/footer');
+	}
+
+
 	function commercailproject(){
 		$data['loaditem'] = $this->sites->loaditem();
 		$this->load->view('site/green/header');

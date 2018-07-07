@@ -1,3 +1,60 @@
+
+
+
+
+
+/*style project page*/
+
+#projects{
+ 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#projects .submenu ul{
+	display: inline;
+}
+.submenu {
+	padding-top: 30px;
+	
+}
+.submenu li{
+	list-style: none;
+    padding: 10px;
+    float: left;
+    width: auto;
+    text-align: center;
+ 	background: #CACFD2;
+   	border-right: 1px solid #000;
+}
+.submenu li a{
+
+	display: block;
+	margin-left: 10px;
+    font-weight: bold;
+    line-height: 2em;
+    color:#212F3C;
+    font-size: 12px;
+}
+.submenu li:hover{
+	background-color: #212F3D;
+	
+}
+.submenu li a:hover{
+	color: #ECF0F1;
+}
+.contentItem{
+	margin-top: 80px;
+	margin-bottom: 50px;
+}
+.image3{
+	width: 100%;
+	height: 350px;
+	padding-top: 25px;
+	
+}
+
+/*end style project page*/
+
 #service-titles{
 	margin: 0;
 

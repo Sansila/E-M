@@ -1,8 +1,8 @@
 <section id="service-title">
     <?php $sql = $this->db->query("SELECT * FROM tbllocation WHERE location_id = 9 AND is_active = 1")->row();?>
-    <div class="main-title">
+    <div class="main-title" style="background-color: #0B5345; ">
         <div class="container">
-            <h2><?php echo $sql->location_name;?></h2>
+            <h1 class="main-title__primary style"><?php echo $sql->location_name;?></h1>
         </div>
     </div>
       <br>

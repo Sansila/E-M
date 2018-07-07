@@ -1,5 +1,5 @@
 
-<div class="main-title" style="background-image: url('http://www.mep-eng.com/wp-content/uploads/2018/05/Mechanical3-edit.png'); background-position: center center; background-repeat: no-repeat; background-attachment: scroll; background-color: #f2f2f2; ">
+<div class="main-title" style=" background-color: #154360; ">
 	<div class="container">
 				<h1 class="main-title__primary style">Services</h1>
 	</div>
