@@ -5,8 +5,9 @@
     margin: 0 0 10px;
     }
     </style>
-    <?php $sql = "SELECT * FROM site_profile";
-    $siteprofile=$this->db->query($sql)->row();
+    <?php 
+        $sql = "SELECT * FROM site_profile";
+        $siteprofile=$this->db->query($sql)->row();
     ?>
     <!--Start of contact-->
     <section id="contact" style="padding: 0px; min-height: 540px;">
@@ -114,8 +115,8 @@
             $(document).ready(function () {
                 map = new GMaps({
                     el: '#map',
-                    lat: 23.6911078,
-                    lng: 90.5112799,
+                    lat: 11.5838592,
+                    lng: 104.8997674,
                     zoomControl: true,
                     zoomControlOpt: {
                         style: 'SMALL',
@@ -130,9 +131,9 @@
 
 
                 map.addMarker({
-                    lat: 23.6911078,
-                    lng: 90.5112799,
-                    title: 'Office',
+                    lat: 11.5838592,
+                    lng: 104.8997674,
+                    title: 'CambodiaSoft',
                     details: {
                         database_id: 42,
                         author: 'Foysal'
