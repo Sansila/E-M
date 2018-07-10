@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>M&E</title>
+        <title>GreenM&E</title>
         <link rel="shortcut icon" type="image/x-icon" href="<?php echo site_url('assets/images/settings.png')?> ">
         <!--    Google Fonts-->
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -55,26 +55,30 @@
 <!-- <body data-spy="scroll" data-target="#header"> -->
     <body>
     <!--Start Hedaer Section-->
+    <?php 
+        $sql = "SELECT * FROM site_profile";
+        $siteprofile=$this->db->query($sql)->row();
+    ?>
     <section id="header">
         <div class="header-area">
             <div class="top_header">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 zero_mp">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 zero_mp">
                             <div class="address">
                                 <i class="fa fa-home floatleft"></i>
-                                <p>Elephant Road, Dhaka 1205, Bangladesh</p>
+                                <p><?=$siteprofile->address?></p>
                             </div>
                         </div>
                         <!--End of col-md-4-->
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 zero_mp">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 zero_mp">
                             <div class="phone">
                                 <i class="fa fa-phone floatleft"></i>
-                                <p>+ 8801532-987039</p>
+                                <p><?=$siteprofile->phone?></p>
                             </div>
                         </div>
                         <!--End of col-md-4-->
-                        <div class="col-md-4">
+                        <div class="col-md-4" style="display:none">
                             <div class="social_icon text-right">
                                 <a href=""><i class="fa fa-facebook"></i></a>
                                 <a href=""><i class="fa fa-twitter"></i></a>

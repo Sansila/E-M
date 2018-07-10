@@ -6,10 +6,10 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <meta name="description" content="">
 	    <meta name="author" content="">	
-	    <title>Pivota Login Form</title>	
+	    <title>GreenM&E Login Form</title>	
 	   	<meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" type="image/x-icon" href="<?php echo site_url('assets/images/logo.png')?> ">
+        <link rel="shortcut icon" type="image/x-icon" href="<?php echo site_url('assets/images/settings.png')?> ">
 		<link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" />
 		<link rel="stylesheet" href="<?php echo base_url('assets/css/font-awesome.css') ?>" />
 		<link rel="stylesheet" href="<?php echo base_url('assets/css/fullcalendar.css') ?>" />

@@ -979,6 +979,7 @@ input#subject{
     font-style: italic;
     color: #696969;
     font-family: 'Open Sans', sans-serif;
+    width: 100%;
 }
 li.fw-flash-message {
     color: red;
