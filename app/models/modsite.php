@@ -368,4 +368,42 @@ class modsite extends CI_Model {
     
     return $query;
   }
+  function loadchurch(){
+    $query = $this->db->query("SELECT * FROM tblarticle WHERE location_id = 33 AND is_active = 1 ")->result();
+    return $query;
+  }
+  function loadeducation(){
+    $query = $this->db->query("SELECT * FROM tblarticle WHERE location_id = 34 AND is_active = 1 ")->result();
+    return $query;
+  }
+  function loadgoverment(){
+    $query = $this->db->query("SELECT * FROM tblarticle WHERE location_id = 35 AND is_active = 1 ")->result();
+    return $query;
+  }
+  function loadhealth_science(){
+    $query = $this->db->query("SELECT * FROM tblarticle WHERE location_id = 36 AND is_active = 1 ")->result();
+    return $query;
+  }
+  function loadmenufacture(){
+    $query = $this->db->query("SELECT * FROM tblarticle WHERE location_id = 37 AND is_active = 1 ")->result();
+    return $query;
+  }
+  function loadmultifamily(){
+    $query = $this->db->query("SELECT * FROM tblarticle WHERE location_id = 38 AND is_active = 1 ")->result();
+    return $query;
+  }
+  function loadoffice(){
+    $query = $this->db->query("SELECT * FROM tblarticle WHERE location_id = 39 AND is_active = 1 ")->result();
+    return $query;
+  }
+  function loadrestaurant(){
+    $query = $this->db->query("SELECT * FROM tblarticle WHERE location_id = 40 AND is_active = 1 ")->result();
+    return $query;
+  }
+
+  function loadarticle($article_id=''){
+    $query = $this->db->query("SELECT tblarticle.*, tblmenus.menu_id FROM tblarticle LEFT JOIN tblmenus ON tblmenus.menu_type=tblarticle.location_id WHERE tblarticle.article_id='$article_id'  AND tblarticle.is_active=1")->row();
+    return $query;
+  }
+
 }

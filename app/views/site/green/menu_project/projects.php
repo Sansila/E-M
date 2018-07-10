@@ -8,14 +8,15 @@
 	<div class="container">
 		<nav class="submenu">
 			<ul>
+				<li class="onproject"><a href="<?=base_url('site/projects')?>">All Project</a></li>
 				<li><a href="<?=base_url('site/church')?>">CHURCH</a></li>
 				<li><a href="<?=base_url('site/education')?>">EDUCATION</a></li>
 				<li><a href="<?=base_url('site/goverment')?>">GOVERNMENT</a></li>
-				<li><a href="<?=base_url('site/healt_science')?>">HEALTH / SCIENCE / TECHNOLOGY</a></li>
+				<li><a href="<?=base_url('site/health_science')?>">HEALTH / SCIENCE / TECHNOLOGY</a></li>
 				<li><a href="<?=base_url('site/menufacture')?>">INDUSTRIAL / MANUFACTURING</a></li>
 				<li><a href="<?=base_url('site/multifamily')?>">MULTIFAMILY</a></li>
-				<li><a href="<?=base_url('site/offce')?>">OFFICE</a></li>
-				<li><a href="<?=base_url('site/restuarant')?>">RESTAURANT/ RETAIL</a></li>
+				<li><a href="<?=base_url('site/office')?>">OFFICE</a></li>
+				<li><a href="<?=base_url('site/restaurant')?>">RESTAURANT/ RETAIL</a></li>
 			</ul>
 		</nav>
 		<div class="contentItem">

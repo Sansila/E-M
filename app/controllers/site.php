@@ -179,43 +179,59 @@ class Site extends CI_Controller {
 	}
 
 	function church(){
+		$data['loadchurch'] = $this->sites->loadchurch();
 		$this->load->view('site/green/header');
-		$this->load->view('site/green/menu_project/church');
+		$this->load->view('site/green/menu_project/church',$data);
 		$this->load->view('site/green/footer');
 	}
 	function education(){
+		$data['loadeducation'] =$this->sites->loadeducation();
 		$this->load->view('site/green/header');
-		$this->load->view('site/green/menu_project/education');
+		$this->load->view('site/green/menu_project/education',$data);
 		$this->load->view('site/green/footer');
 	}
 	function goverment(){
+		$data['loadgoverment'] = $this->sites->loadgoverment();
 		$this->load->view('site/green/header');
-		$this->load->view('site/green/menu_project/goverment');
+		$this->load->view('site/green/menu_project/goverment',$data);
 		$this->load->view('site/green/footer');
 	}
-	function healt_science(){
+	function health_science(){
+		$data['loadhealth_science'] = $this->sites->loadhealth_science();
 		$this->load->view('site/green/header');
-		$this->load->view('site/green/menu_project/healt_science_technology');
+		$this->load->view('site/green/menu_project/healt_science_technology',$data);
 		$this->load->view('site/green/footer');
 	}
 	function menufacture(){
+		$data['loadmenufacture'] =$this->sites->loadmenufacture();
 		$this->load->view('site/green/header');
-		$this->load->view('site/green/menu_project/menufacturing');
+		$this->load->view('site/green/menu_project/menufacturing',$data);
 		$this->load->view('site/green/footer');
 	}
 	function multifamily(){
+		$data['loadmultifamily'] = $this->sites->loadmultifamily();
 		$this->load->view('site/green/header');
-		$this->load->view('site/green/menu_project/multifamily');
+		$this->load->view('site/green/menu_project/multifamily',$data);
 		$this->load->view('site/green/footer');
 	}
 	function office(){
+		$data ['loadoffice'] = $this->sites->loadoffice();
 		$this->load->view('site/green/header');
-		$this->load->view('site/green/menu_project/office');
+		$this->load->view('site/green/menu_project/office',$data);
 		$this->load->view('site/green/footer');
 	}
 	function restaurant(){
+		$data['loadrestaurant'] = $this->sites->loadrestaurant();
 		$this->load->view('site/green/header');
-		$this->load->view('site/green/menu_project/restaurant');
+		$this->load->view('site/green/menu_project/restaurant',$data);
+		$this->load->view('site/green/footer');
+	}
+
+	function articlespecify($article_id=''){
+		//print_r($article_id);
+		$data['loadarticle'] = $this->sites->loadarticle($article_id);
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/menu_project/articledetail',$data);
 		$this->load->view('site/green/footer');
 	}
 

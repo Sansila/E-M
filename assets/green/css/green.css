@@ -19,17 +19,33 @@
 }
 .submenu li{
 	list-style: none;
-    padding: 10px;
+    padding: 5px;
     float: left;
     width: auto;
     text-align: center;
  	background: #CACFD2;
    	border-right: 1px solid #000;
 }
-.submenu li a{
+.onproject{
+	background: blue !important;
+	list-style: none !important;
+    padding: 10px !important;
+    /*border-right: 1px solid #000;*/
+}
+.onproject a{
+	color: white !important;
+}
 
+}
+.submenu li a{
+	color:#000 !important;
+	font-weight: 600 !important;
+	font-size: 12px !important;
+}
+.submenu li a{
+	font-family: Roboto;
 	display: block;
-	margin-left: 10px;
+	margin-left: 3px;
     font-weight: bold;
     line-height: 2em;
     color:#212F3C;
@@ -46,14 +62,132 @@
 	margin-top: 80px;
 	margin-bottom: 50px;
 }
-.image3{
-	width: 100%;
-	height: 350px;
+.container_image_link{
 	padding-top: 25px;
-	
+	position: relative;
+    width: 100%;
 }
 
+.coverimage {
+    position: relative;
+    width: 50%;
+}
+
+.image3 {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.center {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  
+}
+
+.coverimage:hover .image3 {
+  opacity: 0.1;
+  background: black;
+}
+
+.coverimage:hover .center {
+  opacity: 0.1;
+}
+
+.hover{
+	position: relative;
+    /*width: 50%;*/
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hover:hover .image {
+  opacity: 0.3;
+}
+
+.hover:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 12px;
+  padding: 16px 32px;
+}
+
+
 /*end style project page*/
+
+/*style project detail data*/
+.project_metadata{
+	margin-top: 30px;
+	background-color: #eeeeee;
+    padding: 16px 22px;
+    color: #666666;
+    margin-bottom: 30px;
+    border-radius: 2px;
+
+}
+.project_metadata li{
+	margin-bottom: 5px;
+
+}	
+.list_unstyled{
+	padding-left: 0;
+    list-style: none;
+}
+
+.project_metairon{
+	display: inline-block;
+    min-width: 20px;
+    margin-right: 4px;
+    font-size: 120%;
+    text-align: center;
+}
+.content-p{
+	padding-bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.hentry__content{
+	font-size: 16px;
+}
+.content-p p{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-family: Roboto;
+	font-weight: 400;
+	font-style: normal; 
+}
+/*end style project detail data*/
 
 #service-titles{
 	margin: 0;
