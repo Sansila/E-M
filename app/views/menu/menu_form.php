@@ -81,7 +81,7 @@ a{
               <label class='col-lg-2 control-label'>Link</label>
               <div class="col-lg-5"> 
                 <div class="col-md-12">
-                  <input type="text"  class="form-control input-sm required" name="link" value='<?php echo isset($row->link)?"$row->link":""; ?>' id="link">
+                  <input type="text"  class="form-control input-sm " name="link" value='<?php echo isset($row->link)?"$row->link":""; ?>' id="link">
                 </div>                   
               </div>
             </div>

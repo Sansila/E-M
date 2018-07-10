@@ -417,5 +417,6 @@ class modsite extends CI_Model {
     $query = $this->db->query("SELECT * FROM tblarticle WHERE location_id = '$menu_id' ")->result();
     return $query;
   }
+  
 
 }

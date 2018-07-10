@@ -1,7 +1,16 @@
 
 <div class="main-title" style="background-color: #154360; ">
 	<div class="container">
-				<h1 class="main-title__primary style">Projects</h1>
+				<?php foreach($projectmenu as $title ){
+					if($title->menu_type == $menu_id){ ?>
+
+						<h1 class="main-title__primary style"><?php echo $title->menu_name;?></h1>
+					<?php } 
+				}?>
+							
+
+	
+			
 	</div>
 	
 </div>
