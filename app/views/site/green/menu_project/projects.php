@@ -10,60 +10,33 @@
 
 
 		<ul id="breadcrumbs-four">
-		    <!-- <li><a href="">Lorem ipsum</a></li>
-		    <li><a href="">Vivamus nisi eros</a></li>
-		    <li><a href="">Nulla sed lorem risus</a></li>
-		    <li><a href="">Nam iaculis commodo</a></li>
-		    <li><a href="" class="current">Current crumb</a></li> -->
+		   
 		    <?php foreach ($projectmenu as $menu) {?>
-		   		<li><a href="<?php echo base_url().$menu->link.'/'.$menu->menu_id;?>"><?php echo $menu->menu_name?></a></li>
-		    <?php }?>
+		   		<li><a href="<?php echo base_url().$menu->link.'/'.$menu->menu_type;?>"><?php echo $menu->menu_name?></a></li>
+			<?php 
+			}?>
 		</ul>
-
-
-
-		<nav class="submenu">
-			<ul>
-				<li class="onproject"><a href="<?=base_url('site/projects')?>">All Project</a></li>
-				<li><a href="<?=base_url('site/church')?>">CHURCH</a></li>
-				<li><a href="<?=base_url('site/education')?>">EDUCATION</a></li>
-				<li><a href="<?=base_url('site/goverment')?>">GOVERNMENT</a></li>
-				<li><a href="<?=base_url('site/health_science')?>">HEALTH / SCIENCE / TECHNOLOGY</a></li>
-				<li><a href="<?=base_url('site/menufacture')?>">INDUSTRIAL / MANUFACTURING</a></li>
-				<li><a href="<?=base_url('site/multifamily')?>">MULTIFAMILY</a></li>
-				<li><a href="<?=base_url('site/office')?>">OFFICE</a></li>
-				<li><a href="<?=base_url('site/restaurant')?>">RESTAURANT/ RETAIL</a></li>
-			</ul>
-		</nav>
-
-		
-
 		<div class="contentItem">
 			<div class="row">
-				<div class="col-md-3 " style="padding-top: 20px;">
-					<a href="<?=base_url('site/church')?>"><img class="image3" src="<?=base_url('assets/images/church1.jpg')?>"></a>	
+
+
+
+				<?php 
+		
+					foreach ($listmenu as $list) {
+						$sql = $this->db->query("SELECT * FROM tblgallery WHERE article_id = '$list->article_id' limit 1 ")->row();
+						?>
+						<div class="col-md-3 hover" style="padding-top: 30px;">
+					  <img src="<?=base_url().'assets/upload/article/'.$list->article_id.'_'.$sql->url;?>" alt="" class="image">
+					  <div class="middle">
+					  	<p><?php echo $list->article_title;?></p>
+					    <a href="<?= site_url('site/articlespecify/'.$list->article_id);?>"><div class="text">Read More</div></a>
+					  </div>
 				</div>
-				<div class="col-md-3 " style="padding-top: 20px;">
-					<a href="<?=base_url('site/education')?>"><img class="image3" src="<?=base_url('assets/images/Arapahoe-HS-Library-1.jpg')?>"></a>	
-				</div>
-				<div class="col-md-3 " style="padding-top: 20px;">
-					<a href="<?=base_url('site/goverment')?>"><img class="image3" src="<?=base_url('assets/images/DPKb4k_UQAAVyii.jpg')?>"></a>	
-				</div>
-				<div class="col-md-3 " style="padding-top: 20px;">
-					<a href="<?=base_url('site/health_science')?>"><img class="image3" src="<?=base_url('assets/images/ERA-Lab-3-150x150.jpg')?>"></a>	
-				</div>
-				<div class="col-md-3 " style="padding-top: 20px;">
-					<a href="<?=base_url('site/menufacture')?>"><img class="image3" src="<?=base_url('assets/images/BE-1900-Simulator-1-150x150.jpg')?>"></a>	
-				</div>
-				<div class="col-md-3 " style="padding-top: 20px;">
-					<a href="<?=base_url('site/multifamily')?>"><img class="image3" src="<?=base_url('assets/images/Platform-Model-2BR-11-150x150.jpg')?>"></a>	
-				</div>
-				<div class="col-md-3 " style="padding-top: 20px;">
-					<a href="<?=base_url('site/office')?>"><img class="image3" src="<?=base_url('assets/images/Belleview-Station-Meeting-Room-150x150.jpg')?>"></a>	
-				</div>
-				<div class="col-md-3 " style="padding-top: 20px;">
-					<a href="<?=base_url('site/restaurant')?>"><img class="image3" src="<?=base_url('assets/images/marcos-pizza4-150x150.jpeg')?>"></a>	
-				</div>
+				<?php }
+				?>
+
+				
 			</div>
 		</div>
 	</div>

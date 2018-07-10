@@ -41,31 +41,7 @@
 					<?php }
 					} ?>
 				</div>
-				<!-- <div class="mechanical-title">
-					<h1 class="style-title">Tenant Improvement Specialists</h1>
-				</div>
-				<div class="row">
-					<div class="col-md-12" style=" padding: 40px 0;">
-						<div class="col-md-5">
-							
-								<div class="plumbing-image-article">
-									<img src="<?=base_url().'assets/images/building.png'?>">
-								</div>
-						</div>
-						<div class="col-md-7">
-							
-							<div class="display-content">
-								<p>Our dedicated Building and Tenant Services team is here for you and your building. We know you need a dependable partner who will deliver on time, every time, at the drop of the hat. We understand your primary objective—to keep every building tenant happy!</p>
-								<p>Our Building and Tenant Services group has Tenant Improvement down to a science. We are a small, nimble team that can respond to your needs quickly, yet we have our entire MEP office to draw upon when required. We have completed over 2,000 tenant improvement projects ranging in size from 100 square feet to over 150,000 square feet.</p>
-							</div>
-						</div>
-					</div>
-		
-				</div> -->
-				<!-- <div class="electrical-title">
-					<h1 class="style-title">Find out how our TI team can help you:</h1>
-				</div>
-			</div> -->
+				
 			<div class="col-md-3">
 				<div class="row">
 					<div class="col-md-12">

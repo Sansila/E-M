@@ -326,7 +326,7 @@ class modsite extends CI_Model {
   }
   function serviceblog(){
     $query = $this->db->query("SELECT * FROM tblarticle as a 
-                        inner join tblgallery as g on a.article_id = g.article_id
+                        left join tblgallery as g on a.article_id = g.article_id
                         WHERE a.location_id = 26 AND a.is_active = 1 ")->result();
     return $query;
   }
@@ -408,7 +408,13 @@ class modsite extends CI_Model {
 
   function getmenuproject()
   {
-    $query = $this->db->query("SELECT * FROM tblmenus WHERE parentid = 32 ")->result();
+    $query = $this->db->query("SELECT * FROM tblmenus WHERE parentid = 32 ORDER BY menu_name")->result();
+    return $query;
+  }
+
+  function getitemmenu($menu_id)
+  {
+    $query = $this->db->query("SELECT * FROM tblarticle WHERE location_id = '$menu_id' ")->result();
     return $query;
   }
 

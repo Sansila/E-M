@@ -39,8 +39,6 @@
 			<?php } else  {
 		?>
 			<?php 
-			 // foreach($loadelectrical as $odd) { 
-				 // if($odd->article_id == 129){ 
 					?>
 				<div class="electrical-title">
 					<h1 class="style-title"><?php echo $key->article_title; ?></h1>
@@ -54,30 +52,6 @@
 				
 			} 
 			?>
-					<!-- <div class="row">
-					<div class="col-md-12">
-						<div class="col-md-4">
-							<div class="image-article">
-								<img src="<?=base_url().'assets/images/electrical.jpg'?>" style="height: 250px;">
-							</div>
-						</div>
-						<div class="col-md-8">
-							<div class="mechanical-title">
-								<h1 class="style-title">Access Seasoned Expertise</h1>
-							</div>
-							<div class="display-content">
-								<p>As you decide who to hire for your next electrical project, your first concerns may be where to locate bulky electrical switch gear or how to choose lighting fixtures that meet code requirements and lend appeal to your finished space. We understand and we can help. We’ve solved many design puzzles over the years and Electrical Services are at the core of what we do best. Our electrical engineers are certified or licensed either as P.E., E.I., LEED AP or a combination of the three. They stay informed and on top of the latest developments in the field through active participation in a variety of professional organizations.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="electrical-title">
-					<h1 class="style-title">Benefit from trusted relationships</h1>
-				</div>
-				<div class="display-content">
-					<p>Each of our engineers also works diligently to build and maintain relationships with lighting and power vendors as well as local jurisdictions. Close ties help our engineers stay informed about the latest trends and technologies. They also help us finish your job more efficiently. We can assist you in placing your large transformer in a tight urban area, for example. We use our knowledge, research and community involvement to create environments that are highly functional, safe and aesthetically pleasing.</p>
-				</div>
-			</div> -->
 			<div class="col-md-3">
 				<div class="row">
 					<div class="col-md-12">
