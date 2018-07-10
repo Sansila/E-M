@@ -406,4 +406,10 @@ class modsite extends CI_Model {
     return $query;
   }
 
+  function getmenuproject()
+  {
+    $query = $this->db->query("SELECT * FROM tblmenus WHERE parentid = 32 ")->result();
+    return $query;
+  }
+
 }
