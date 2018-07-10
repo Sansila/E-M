@@ -11,12 +11,20 @@
 
 		<ul id="breadcrumbs-four">
 		   
-		    <?php foreach ($projectmenu as $menu) {?>
-		   		<li><a href="<?php echo base_url().$menu->link.'/'.$menu->menu_type;?>"><?php echo $menu->menu_name?></a></li>
-			<?php 
-			}?>
+		    <?php 
+		    	$current = '';
+		    	foreach ($projectmenu as $menu) {
+		    		if($menu->menu_type == $menu_id)
+		    		{
+		    			$current = 'current';
+		    		}else{
+		    			$current = '';
+		    		}
+		    ?>
+		   		<li><a class="<?php echo $current;?>" href="<?php echo base_url().$menu->link.'/'.$menu->menu_type;?>"><?php echo $menu->menu_name?></a></li>
+			<?php }?>
 		</ul>
-		<div class="contentItem">
+		<div class="contentItem" style="margin: 0px 0px 10px;">
 			<div class="row">
 
 

@@ -195,9 +195,9 @@
                                         $submenuname=$l_1->menu_name;
                                         $link = '#';
                                         if($l_1->article_id != 0){
-                                        $link = site_url($l_1->link).'/'.$parentid;
+                                        $link = site_url($l_1->link).'/'.$l_1->menu_type;
                                         }else{
-                                        $link = site_url($l_1->link).'/'.$parentid;
+                                        $link = site_url($l_1->link).'/'.$l_1->menu_type;
                                         }
                                         $s = "
                                         <li>

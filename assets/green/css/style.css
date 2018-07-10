@@ -131,7 +131,7 @@ font-family: 'Roboto', sans-serif;
 .collapse ul li > ul li{
     width: 100%;
     text-align: center;
-     padding: 10px 0px 0 0;
+     padding: 10px 10px 0px;
 }
 ul {
     margin: 0;

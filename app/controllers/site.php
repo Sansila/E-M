@@ -175,6 +175,7 @@ class Site extends CI_Controller {
 		$this->load->view('site/green/header');
 		$data['projectmenu'] = $this->sites->getmenuproject();
 		$data['listmenu'] = $this->sites->getitemmenu($menu_id);
+		$data['menu_id'] = $menu_id;
 		$this->load->view('site/green/menu_project/projects',$data);
 		$this->load->view('site/green/footer');
 
