@@ -1,3 +1,4 @@
+
 <div class="main-title" style="background-color: #154360; ">
 	<div class="container">
 				<h1 class="main-title__primary style">Projects</h1>
@@ -6,6 +7,21 @@
 </div>
 <section id="projects">
 	<div class="container">
+
+
+		<ul id="breadcrumbs-four">
+		    <!-- <li><a href="">Lorem ipsum</a></li>
+		    <li><a href="">Vivamus nisi eros</a></li>
+		    <li><a href="">Nulla sed lorem risus</a></li>
+		    <li><a href="">Nam iaculis commodo</a></li>
+		    <li><a href="" class="current">Current crumb</a></li> -->
+		    <?php foreach ($projectmenu as $menu) {?>
+		   		<li><a href="<?php echo base_url().$menu->link.'/'.$menu->menu_id;?>"><?php echo $menu->menu_name?></a></li>
+		    <?php }?>
+		</ul>
+
+
+
 		<nav class="submenu">
 			<ul>
 				<li class="onproject"><a href="<?=base_url('site/projects')?>">All Project</a></li>
@@ -19,6 +35,9 @@
 				<li><a href="<?=base_url('site/restaurant')?>">RESTAURANT/ RETAIL</a></li>
 			</ul>
 		</nav>
+
+		
+
 		<div class="contentItem">
 			<div class="row">
 				<div class="col-md-3 " style="padding-top: 20px;">

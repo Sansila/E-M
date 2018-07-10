@@ -173,7 +173,8 @@ class Site extends CI_Controller {
 
 	function projects(){
 		$this->load->view('site/green/header');
-		$this->load->view('site/green/menu_project/projects');
+		$data['projectmenu'] = $this->sites->getmenuproject();
+		$this->load->view('site/green/menu_project/projects',$data);
 		$this->load->view('site/green/footer');
 
 	}
