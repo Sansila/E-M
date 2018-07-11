@@ -6,7 +6,7 @@
 				<?php echo $loadarticle->content; ?>
 
 				<!-- this is the form for edit or upload new article on project`s categories -->
-				<!-- <div class="project_metadata">
+			<!-- <div class="project_metadata">
 					<ul class="list_unstyled">
 						<li><span class="project_metairon"><i class="fa fa-folder"></i></span>
 							<strong>Name:</strong>
@@ -22,7 +22,7 @@
 						</li>
 						<li><span class="project_metairon"><i class="fa  fa-cogs"></i></span>
 							<strong> MEP Services:</strong>
-							   We provided mechanical, electrical, and plumbing engineering services for a 3-story 18,000 square foot mixed use office/retail building.
+							   We 
 						</li>
 						<li><span class="project_metairon"><i class="fa fa-th-list"></i></span>
 							<strong> Category:</strong>

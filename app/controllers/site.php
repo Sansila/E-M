@@ -505,6 +505,13 @@ class Site extends CI_Controller {
 	    }
 	    redirect($_SERVER['HTTP_REFERER']);
 	  }
-	  
+	  function send()
+	  {
+	  	$subject = "Application from by - ".$this->input->post("name");
+	  	$name = $this->input->post("name");
+	  	$email = $this->input->post("email");
+	  	$message = $this->input->post("message");
+
+	  }
 }
 ?>

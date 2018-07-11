@@ -42,13 +42,13 @@
                             <!-- CONTACT FORM -->
                             <div class="contact-form wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
                                 <div id="message"></div>
-                                <form action="scripts/contact.php" class="form-horizontal contact-1" role="form" name="contactform" id="contactform">
+                                <form method="POST" action="<?php base_url(); ?>site/sendMail" enctype="" class="form-horizontal contact-1" role="form" name="contactform" id="contactform">
                                     <div class="form-group">
                                         <div class="col-sm-6">
                                             <input type="text" class="form-control" name="name" id="name" placeholder="Name">
                                         </div>
                                         <div class="col-sm-6">
-                                            <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+                                            <input type="text" class="form-control" name="email" id="email" placeholder="Email" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -57,7 +57,7 @@
                                             <div class="text_area">
                                                 <textarea name="contact-message" id="msg" class="form-control" cols="30" rows="8" placeholder="Message"></textarea>
                                             </div>
-                                            <button type="submit" class="btn custom-btn" data-loading-text="Loading...">Send</button>
+                                            <button type="submit" class="btn custom-btn" value="submit" name="submit" data-loading-text="Loading...">Send</button>
                                         </div>
                                     </div>
                                 </form>
