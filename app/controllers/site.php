@@ -331,11 +331,16 @@ class Site extends CI_Controller {
 		$this->load->view('site/book_detail',$datas);
 		$this->load->view('site/footer');
 	}
-	function contactus() {
-		$this->load->view('site/header');
-		$this->load->view('site/contactus');
-		$this->load->view('site/footer');
+	function contact_us() {
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/contact/contactus');
+		$this->load->view('site/green/contact/footer');
 	}
+	// function contactus() {
+	// 	$this->load->view('site/header');
+	// 	$this->load->view('site/contactus');
+	// 	$this->load->view('site/footer');
+	// }
 	function requestquote() {
 		$this->load->view('site/header');
 		$this->load->view('site/requestquote');
@@ -468,7 +473,7 @@ class Site extends CI_Controller {
 	 function sendMail() {
 		$name = $this->input->post('txt_name');
 		$email = $this->input->post('txt_email');
-		$Product=$this->input->post('sproduct');
+		$Product=$this->input->post('((sproduct))');
 		$message = $this->input->post('txt_message'); 
 		// print_r($this->input->post());die();
 
@@ -490,7 +495,7 @@ class Site extends CI_Controller {
 
 		$ci->email->subject('REQUESTQUOTE');
 		$ci->email->message($message);
-		// $ci->email->message("EKALOMAN<br><a href='".site_url('assets/upload/attachment/'.$data_upload['file_name'])."' target='_blank'>View Attachment</a>");
+		// $ci->email->message("EKALOMAN<br><a href='""\$ma.site_url('assets/upload/attachment/'.$data_upload['file_name'])."' target='_blank'>View Attachment</a>");
 		
 	    if($this->email->send()) {
 	    	$this->session->set_flashdata('mail_sent', 'Your email has been sent to our HR. Thank you...!<br>Please wait for further information contact to you later.');

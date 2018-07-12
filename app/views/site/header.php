@@ -1,6 +1,5 @@
 <!doctype html>
 <html class="no-js" lang="en">
-
 <!-- Mirrored from techlinqs.com/html/bookstore-0.2/bookstore-ltr/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Mar 2018 04:19:57 GMT -->
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />

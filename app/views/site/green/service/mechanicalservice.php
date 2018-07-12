@@ -66,14 +66,14 @@
 				<div class="row">
 					<div class="col-md-12">
 						<h4 class="style-title">SERVICE</h4>
-							<div class="blog-menu">
-								<ul id="service-menu" class="menu">
+							<div id="rightmenu">
+								<ul>
 									<li class="onmenu"><a  href="<?=base_url('site/mechanical')?>"> Mechanical Services</a></li>
-									<li class="menu-list"><a href="<?=base_url('site/electrical')?>">Electrical Services</a></li>
-									<li class="menu-list"><a href="<?=base_url('site/plumbing')?>">Plumbing Services</a></li>
-									<li class="menu-list"><a href="<?=base_url('site/building')?>">Building and Tenant Services</a></li>
-									<li class="menu-list"><a href="<?=base_url('site/specialty')?>">Specialty Services</a></li>
-									<li class="menu-list"><a href="<?=base_url('site/buildinginformation')?>">Building Information Modeling</a></li>
+									<li ><a href="<?=base_url('site/electrical')?>">Electrical Services</a></li>
+									<li ><a href="<?=base_url('site/plumbing')?>">Plumbing Services</a></li>
+									<li ><a href="<?=base_url('site/building')?>">Building and Tenant Services</a></li>
+									<li ><a href="<?=base_url('site/specialty')?>">Specialty Services</a></li>
+									<li ><a href="<?=base_url('site/buildinginformation')?>">Building Information Modeling</a></li>
 								</ul>
 							</div>
 							<div class="clearfix"></div>

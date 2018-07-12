@@ -36,6 +36,29 @@
         <!--Counter UP-->
         <script src="<?=base_url().'assets/green/js/jquery.counterup.min.js'?>"></script>
 
+
+
+        <link rel="stylesheet" href="<?=base_url().'assets/bootstrap/bootstrap.min.css'?>">
+        <link rel="stylesheet" href="<?=base_url().'assets/css/font-awesome.min.css'?>">
+        <link rel="stylesheet" href="<?=base_url().'assets/css/animate.css'?>">
+        <link rel="stylesheet" href="<?=base_url().'assets/css/icomoon.css'?>">
+         <link rel="stylesheet" href="<?=base_url().'assets/css/main.css'?>"> 
+        <link rel="stylesheet" href="<?=base_url().'assets/css/color-1.css'?>">
+        <link rel="stylesheet" href="<?=base_url().'assets/bootstrap/style.css'?>">
+        <link rel="stylesheet" href="<?=base_url().'assets/css/responsive.css'?>">
+        <link rel="stylesheet" href="<?=base_url().'assets/css/transition.css'?>">
+
+        <!-- Online Lib -->
+        <link rel="stylesheet" href="<?=base_url().'assets/bootstrap/tether.min.css'?>">
+        <script src="<?=base_url().'assets/bootstrap/tether.min.js'?>"></script>
+
+        <!-- Switcher CSS -->
+        <!-- <link href="<?=base_url().'assets/switcher/switcher.css'?>" rel="stylesheet" type="text/css"/>  -->
+        <link rel="stylesheet" id="skins" href="<?=base_url().'assets/css/default.css'?>" type="text/css" media="all">
+
+        <!-- FontsOnline -->
+        <link href='https://fonts.googleapis.com/css?family=Merriweather:300,300italic,400italic,400,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900italic,900,100italic,100' rel='stylesheet' type='text/css'>
     </head>
    
     <style type="text/css">
@@ -182,7 +205,7 @@
                                         }
                                     ?>
                                     
-                                    <i class="" ></i><?=$men_name?></a>
+                                    <i class=""></i><?=$men_name?></a>
                                     <?php
                                     $sql_sub = "SELECT * FROM tblmenus WHERE is_active=1 AND level=1 AND parentid ='$parentid' ORDER BY tblmenus.order ASC ";
                                     $sub_menus = $this->db->query($sql_sub)->result();
@@ -201,7 +224,7 @@
                                         }
                                         $s = "
                                         <li>
-                                            <a href='".$link."'>
+                                           <a href='".$link."'>
                                                 ".$submenuname."
                                             </a>
                                         </li>

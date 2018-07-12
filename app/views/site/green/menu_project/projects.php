@@ -6,11 +6,7 @@
 
 						<h1 class="main-title__primary style"><?php echo $title->menu_name;?></h1>
 					<?php } 
-				}?>
-							
-
-	
-			
+				}?>	
 	</div>
 	
 </div>
