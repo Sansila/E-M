@@ -21,9 +21,8 @@
                 <div class="table-responsive" style="padding: 10px;">
                     
                     <?php  echo $row->content;?>
-                <!-- <div class="col-sm-12 col-xs-12" style="border: 1px solid #ddd;">
-                    
-                
+                <!-- <div class="col-sm-12 col-xs-12" style="border: 1px solid #ddd;">   
+          
             </div> -->
                 </div>
                 

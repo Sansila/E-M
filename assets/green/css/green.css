@@ -1,6 +1,19 @@
 
 
+#caboutuscontent{
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+.about-content{
+  padding-top: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.about-content p{
 
+  font-family:  Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  padding-bottom: 5px;
+}
 /*style contact us page*/
 #contentcontactus{
    margin-top: 20px;
@@ -180,8 +193,8 @@
 }
 .content-p{
 	padding-bottom: 15px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 .hentry__content{
 	font-size: 16px;

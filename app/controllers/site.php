@@ -324,6 +324,13 @@ class Site extends CI_Controller {
 		$this->load->view('site/aboutus',$datas);
 		$this->load->view('site/footer');
 	}
+
+	function about() 
+	{
+		$this->load->view('site/green/header');
+		$this->load->view('site/green/aboutus/aboutus');
+		$this->load->view('site/green/footer');
+	}
 	function book_detail() {
 		// $datas['row'] = $this->sites->getupaboutus();
 		$datas['site_lang'] = $this->language;

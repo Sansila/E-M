@@ -29,7 +29,7 @@
                             <div class="address-column">
                                 <span class="address-icon"><i class="fa fa-map-marker"></i></span>
                                 <h6>Address</h6>
-                                <strong>Cambodsoft</strong>
+                                <strong>CAMBODIASOFT</strong>
                                 <p><?=$siteprofile->address?></p>
                             </div>
                         </div>
