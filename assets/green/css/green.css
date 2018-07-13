@@ -297,6 +297,7 @@
     width: 100%;
     display: block;
     background: #eeeeee;
+    padding: 10px;
 }
 #rightmenu ul li:hover{
     text-align: left;
@@ -321,10 +322,15 @@
   
 }
 .contectus-content{
-	padding-left: 20px;
+	font-family: Roboto;
+
 }
 .contectus-content p{
-	padding-top: 10px;
+    display: block;
+	  -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
 }
 
 #service-menu {
