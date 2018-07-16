@@ -1,4 +1,3 @@
-
 <?php
     $lang['home'] = "ទំព័រដើម";
     $lang['SERVICES']="សេវាកម្ម";

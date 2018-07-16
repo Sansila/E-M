@@ -7,6 +7,7 @@ class Site extends CI_Controller {
 	protected $searchrow;	
 	function __construct(){
 		parent::__construct();
+
 		//Setting language in session on first load
 		if(!$this->session->userdata('site_lang')){ 
 			// $this->load->library('session');
@@ -107,6 +108,7 @@ class Site extends CI_Controller {
 		}
 		$this->load->view('site/green/index',$datas);
 		//$this->load->view('site/home',$datas); //used before
+
 		$this->load->view('site/green/footer'); 
 		//$this->load->view('site/footer'); //used before
 	}
@@ -519,11 +521,53 @@ class Site extends CI_Controller {
 	  }
 	  function send()
 	  {
-	  	$subject = "Application from by - ".$this->input->post("name");
-	  	$name = $this->input->post("name");
-	  	$email = $this->input->post("email");
-	  	$message = $this->input->post("message");
+	  	//$datas['site_lang'] = $this->language;
+	  	//$this->lang->load('email_lang');
+	  	$this->load->library('session');
+
+	  	$name=$this->input->post('name');
+		$email=$this->input->post('email');
+		$subject=$this->input->post('subject');
+		$message=$this->input->post('message');
+
+
+		// echo "form correct";
+		$config = Array(
+		  'protocol' => 'smtp',
+		  'smtp_host' => 'smtp.mailtrap.io',//this im using mailtrap server for send mailing
+		  'smtp_port' => 2525,//port of mailtrap
+		  'smtp_user' => 'a458e08858ba00',//account mailtrap
+		  'smtp_pass' => 'f0fb41ec16fb15',//password mailtrap
+		  'crlf' => "\r\n",
+		  'newline' => "\r\n"
+		);
+
+		$ci = get_instance();
+		$ci->load->library('email');
+		
+   
+       
+        $ci->email->initialize($config);
+        $ci->email->from('a458e08858ba00');//acount mailtrap
+		$ci->email->to($email,$name);
+		$ci->email->subject($subject);
+		$ci->email->message($message);
+		// echo "form correct";
+		// $ci->email->send();
+	    if($this->email->send())
+	     {
+	     
+	     	$this->load->index();
+	   		// redirect(base_url() . "site/index");
+	   		// $this->session->set_flashdata('mail_sent', 'Your email has been sent. Thank you...!')
+	   		// redirect('site/index');
+	     	
+	      
+	     }
+	     else
+	    {
+	     show_error($this->email->print_debugger());
+	    }
 
 	  }
 }
-?>

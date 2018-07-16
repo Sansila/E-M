@@ -40,9 +40,11 @@
                         </div>
                         <div class="form_area">
                             <!-- CONTACT FORM -->
+                       
                             <div class="contact-form wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
                                 <div id="message"></div>
-                                <form method="POST" action="<?php base_url(); ?>site/sendMail" enctype="" class="form-horizontal contact-1" role="form" name="contactform" id="contactform">
+                                <?php //echo form_open('class="form-horizontal contact-1" role="form" name="contactform" id="contactform"'); ?>
+                                
                                     <div class="form-group">
                                         <div class="col-sm-6">
                                             <input type="text" class="form-control" name="name" id="name" placeholder="Name">
@@ -55,12 +57,12 @@
                                         <div class="col-sm-12">
                                             <input type="subject" class="form-control" id="subject" placeholder="Subject *">
                                             <div class="text_area">
-                                                <textarea name="contact-message" id="msg" class="form-control" cols="30" rows="8" placeholder="Message"></textarea>
+                                                <textarea name="message" id="msg" class="form-control" cols="30" rows="8" placeholder="Message"></textarea>
                                             </div>
-                                            <button type="submit" class="btn custom-btn" value="submit" name="submit" data-loading-text="Loading...">Send</button>
-                                        </di<<v>
+                                            <button class="btn custom-btn send-email" value="submit" name="submit" data-loading-text="Loading...">Send</button>
+                                        </div>
                                     </div>
-                                </form>
+                                <?php form_close();?>
                             </div>
                         </div>
                     </div>
@@ -147,6 +149,25 @@
                         if (console.log)
                             console.log(e);
                     }
+                });
+                //action send mail form to function send in controller site
+                $('.send-email').click(function(){
+                    $.ajax({
+                        url: 'http://enm.com/site/send',
+                        type: 'post',
+                        data: {
+                            name: $('#name').val(),
+                            email: $('#email').val(),
+                            subject: $('#subject').val(),
+                            message: $('#msg').val()
+                        },
+                        success:function(data)
+                        {
+                            console.log(data);
+                            alert('Your email has been sent to our HR. Thank you...!<br>Please wait for further information contact to you later.');
+                            window.location.reload();
+                        }
+                    });
                 });
             });
         </script>
